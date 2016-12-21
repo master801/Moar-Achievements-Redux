@@ -1,0 +1,23 @@
+##Workspace
+/build
+/run
+
+##IntelliJ IDEA
+/out
+*.iml
+*.ipr
+*.iws
+
+##Eclipse
+/eclipse
+
+
+##Misc
+
+
+##Gradle
+/.gradle
+
+
+##Garbage
+Thumbs.db

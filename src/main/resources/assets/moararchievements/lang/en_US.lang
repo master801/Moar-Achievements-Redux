@@ -1,0 +1,353 @@
+item.achievementGetter.name=Achievementizer
+
+achievement.buildShovel
+achievement.buildShovel=Time to dig!
+achievement.buildShovel.desc=Make a shovel!
+achievement.buildSteelPickaxe
+achievement.buildSteelPickaxe=Ready For Diamonds
+achievement.buildSteelPickaxe.desc=Make an iron pickaxe
+achievement.buildGoldPickaxe
+achievement.buildGoldPickaxe=Just For Fun
+achievement.buildGoldPickaxe.desc=Make an useless golden pickaxe
+achievement.buildDiamondPickaxe
+achievement.buildDiamondPickaxe=Time to get Obsidian!
+achievement.buildDiamondPickaxe.desc=Make yourself an diamond pickaxe
+achievement.buildAxe
+achievement.buildAxe=Time to Chop Trees
+achievement.buildAxe.desc=Make a wooden axe!
+achievement.buildChest
+achievement.buildChest=Extra Stuff!
+achievement.buildChest.desc=Make a chest
+achievement.mineCoal
+achievement.mineCoal=Let's cook some meat!
+achievement.mineCoal.desc=Mine some coal
+achievement.mineRedstone
+achievement.mineRedstone=What The?
+achievement.mineRedstone.desc=Mine some redstone
+achievement.buildCompass
+achievement.buildCompass=Where it All Began...
+achievement.buildCompass.desc=Make a compass out of redstone
+achievement.smeltCobbleStone
+achievement.smeltCobbleStone=What is Cobble Anyway?
+achievement.smeltCobbleStone.desc=Smelt some cobblestone into stone
+achievement.buildFlintAndSteel
+achievement.buildFlintAndSteel=BURRRN BABY, BURRRRRN!!!!
+achievement.buildFlintAndSteel.desc=Make a flint and steel
+achievement.buildShears
+achievement.buildShears=On the Move for Wool
+achievement.buildShears.desc=Make some shears
+achievement.collectWool
+achievement.collectWool=Here, Little Sheepy...
+achievement.collectWool.desc=Collect wool from a sheep
+achievement.buildBed
+achievement.buildBed=Time to Rest
+achievement.buildBed.desc=Make a bed
+achievement.killSpider
+achievement.killSpider=String and Spider Eyes??
+achievement.killSpider.desc=Kill a spider
+achievement.killSlime
+achievement.killSlime=Slimey...
+achievement.killSlime.desc=Kill a slime
+achievement.buildBow
+achievement.buildBow=Fire in the Hole!
+achievement.buildBow.desc=Make a bow
+achievement.killCreeper
+achievement.killCreeper=Only Wanted a Hug!
+achievement.killCreeper.desc=Kill a creeper
+achievement.getSkeletonToKillCreeper
+achievement.getSkeletonToKillCreeper=For the Effort...
+achievement.getSkeletonToKillCreeper.desc=Let a skeleton kill a creeper (there is no other way)
+achievement.buildJukebox
+achievement.buildJukebox=Let's get some Music goin'
+achievement.buildJukebox.desc=Build a jukebox
+achievement.buildTNT
+achievement.buildTNT=Boom to ya Fellas!
+achievement.buildTNT.desc=Make some tnt
+achievement.killEnderman
+achievement.killEnderman=Stop Teleporting!
+achievement.killEnderman.desc=Kill an enderman
+achievement.killZombie
+achievement.killZombie=What Can I do With This?
+achievement.killZombie.desc=Kill a zombie
+achievement.killSkeleton
+achievement.killSkeleton=In Ya FACE!
+achievement.killSkeleton.desc=Kill a skeleton
+achievement.killPassiveMobForMeat
+achievement.killPassiveMobForMeat=Food For The Night
+achievement.killPassiveMobForMeat.desc=Kill a passive mob
+achievement.collectEgg
+achievement.collectEgg=Food Fight
+achievement.collectEgg.desc=Collect eggs
+achievement.collectRedApple
+achievement.collectRedApple=Only 8 Gold Nuggets until...
+achievement.collectRedApple.desc=Collect a red apple
+achievement.buildGoldenApple
+achievement.buildGoldenApple.. THE GOLDEN APPLE!
+achievement.buildGoldenApple.desc=Make a golden apple
+achievement.mineDirt
+achievement.mineDirt=Welcome To Minecraft...
+achievement.mineDirt.desc=Mine some dirt
+achievement.buildClock
+achievement.buildClock=What Time Is It???
+achievement.buildClock.desc=Build a clock
+achievement.buildRedstoneTorch
+achievement.buildRedstoneTorch=Not So Bright
+achievement.buildRedstoneTorch.desc=Make a redstone torch
+achievement.buildRedstoneRepeater
+achievement.buildRedstoneRepeater=Time Delay
+achievement.buildRedstoneRepeater.desc=Build a redstone repeater
+achievement.buildPiston
+achievement.buildPiston=Extend and Retract
+achievement.buildPiston.desc=Build a piston
+achievement.buildStickyPiston
+achievement.buildStickyPiston=Back and Forth
+achievement.buildStickyPiston.desc=Make a sticky piston
+achievement.mineSoulSand
+achievement.mineSoulSand=The Slower You Go
+achievement.mineSoulSand.desc=Mine some slow sand
+achievement.mineNetherrack
+achievement.mineNetherrack=I'm On The Highway to Hell!
+achievement.mineNetherrack.desc=Mine netherrack
+achievement.buildBrewingStand
+achievement.buildBrewingStand=Potion Maker
+achievement.buildBrewingStand.desc=Build a brewing stand
+achievement.mineSugarCane
+achievement.mineSugarCane=Me Want Sugar!
+achievement.mineSugarCane.desc=Mine some sugar cane
+achievement.buildPaper
+achievement.buildPaper=If Only I Could Write On This..
+achievement.buildPaper.desc=Make some paper
+achievement.buildMap
+achievement.buildMap=Where am I?
+achievement.buildMap.desc=Make a map
+achievement.buildCookie
+achievement.buildCookie=Cookiesss!
+achievement.buildCookie.desc=Find or make cookies
+achievement.buildNoteblock
+achievement.buildNoteblock=Only For The Notes
+achievement.buildNoteblock.desc=Make a noteblock
+achievement.buildDispenser
+achievement.buildDispenser=Sentry Dispenser
+achievement.buildDispenser.desc=Build a dispenser
+achievement.mineNetherWart
+achievement.mineNetherWart=Why Won't You Grow Stupid Wart!?!
+achievement.mineNetherWart.desc=Mine netherwart
+achievement.mineDragonEgg
+achievement.mineDragonEgg...It's Just Getting Started...
+achievement.mineDragonEgg.desc=Mine the dragon egg with a piston
+achievement.mineCactus
+achievement.mineCactus=Spikey..
+achievement.mineCactus.desc=Get a cactus
+achievement.mineCobblestone
+achievement.mineCobblestone=Cobblestone??
+achievement.mineCobblestone.desc=Mine some Cobblestone
+achievement.mineWheat
+achievement.mineWheat=Time For A Lie!
+achievement.mineWheat.desc=Harvest Some Wheat
+achievement.enterCave
+achievement.enterCave=Light Please?
+achievement.enterCave.desc=Walk into a cave/ravine
+achievement.liveFalling
+achievement.liveFalling=Lucky Break
+achievement.liveFalling.desc=(Almost) Fall to your death
+achievement.eatBacon
+achievement.eatBacon=BACON!!!
+achievement.eatBacon.desc=Have a delicious snack
+achievement.level1
+achievement.level1=LEVEL UP!!!
+achievement.level1.desc=Gain a level
+achievement.level2
+achievement.level2=Welcome Young Squire
+achievement.level2.desc=Gain 2 levels
+achievement.level3
+achievement.level3=Number 3
+achievement.level3.desc=Gain 3 levels
+achievement.level4
+achievement.level4=Another one...?
+achievement.level4.desc=Gain 4 levels
+achievement.level5
+achievement.level5=Novice
+achievement.level5.desc=Gain 5 levels
+achievement.level10
+achievement.level10=Apprentice
+achievement.level10.desc=Gain 10 levels
+achievement.obsidian1
+achievement.obsidian1=Start Dat Portal!
+achievement.obsidian1.desc=Place your first obsidian
+achievement.obsidian2
+achievement.obsidian2=Base of the Portal
+achievement.obsidian2.desc=Place obsidian next to your first obsidian
+achievement.obsidian3
+achievement.obsidian3=Side One
+achievement.obsidian3.desc=Place obsidian in a 3 block pillar
+achievement.obsidian4
+achievement.obsidian4=Side One
+achievement.obsidian4.desc=Place obsidian in a 3 block pillar
+achievement.obsidian5
+achievement.obsidian5=Side One
+achievement.obsidian5.desc=Place obsidian in a 3 block pillar
+achievement.obsidian6
+achievement.obsidian6=Side Two
+achievement.obsidian6.desc=Place obsidian in a different 3 block pillar
+achievement.obsidian7
+achievement.obsidian7=Side Two
+achievement.obsidian7.desc=Place obsidian in a different 3 block pillar
+achievement.obsidian8
+achievement.obsidian8=Side Two
+achievement.obsidian8.desc=Place obsidian in a different 3 block pillar
+achievement.obsidian9
+achievement.obsidian9=Top of the Portal
+achievement.obsidian9.desc=Place obsidian to top off the portal
+achievement.obsidian10
+achievement.obsidian10=Top of the Portal
+achievement.obsidian10.desc=Place obsidian to top off the portal
+achievement.portal1
+achievement.portal1=Portals!
+achievement.portal1.desc=Light your portal
+achievement.portal2
+achievement.portal2=Portals!
+achievement.portal2.desc=Light your portal
+achievement.portal3
+achievement.portal3=Portals!
+achievement.portal3.desc=Light your portal
+achievement.portal4
+achievement.portal4=Portals!
+achievement.portal4.desc=Light your portal
+achievement.portal5
+achievement.portal5=Portals!
+achievement.portal5.desc=Light your portal
+achievement.portal6
+achievement.portal6=Portals!
+achievement.portal6.desc=Light your portal
+achievement.killedByAny
+achievement.killedByAny=So, How Did It Happen?
+achievement.killedByAny.desc=Die By Anything
+achievement.killedByAnykilledByCreeper
+achievement.killedByAnykilledByCreeper=WHAT THE---BOOOOOMMMMM
+achievement.killedByAnykilledByCreeper.desc=Get owned by a Creeper
+achievement.killedByEnderman
+achievement.killedByEnderman=Watch EVERYWHERE
+achievement.killedByEnderman.desc=Get owned by a Enderman
+achievement.killedByAnvil
+achievement.killedByAnvil=This Isn't Looney Tunes!
+achievement.killedByAnvil.desc=Get squashed by an Anvil
+achievement.killedByWall
+achievement.killedByWall=How Did That Happen!?
+achievement.killedByWall.desc=Get killed by a wall
+achievement.killedByFlame
+achievement.killedByFlame=Nice And Toasty
+achievement.killedByFlame.desc=Stand in a fire
+achievement.killedByFire
+achievement.killedByFire=STOP, DROP, AND ROLL!!
+achievement.killedByFire.desc=Get burned alive
+achievement.killedByBlaze
+achievement.killedByBlaze=Lords Of The Nether
+achievement.killedByBlaze.desc=Get killed by a Blaze
+achievement.killedByGhast
+achievement.killedByGhast=Return To Sender(FAIL)
+achievement.killedByGhast.desc=Get killed by a ghast ball
+achievement.killedByFall
+achievement.killedByFall=Trying To Suicide?
+achievement.killedByFall.desc=Fall off of something big
+achievement.killedByFireDispenser
+achievement.killedByFireDispenser=Fireball Pwnage
+achievement.killedByFireDispenser.desc=Get shot by a dispenser with a fire charge
+achievement.killedByArrowDispenser
+achievement.killedByArrowDispenser=Watch Those Tripwires
+achievement.killedByArrowDispenser.desc=Get shot by a dispenser with an arrow
+achievement.killedByWater
+achievement.killedByWater=Ran Out Of Air
+achievement.killedByWater.desc=Suffocate underwater
+achievement.killedByIron
+achievement.killedByIron=Well, that's IRONic
+achievement.killedByIron.desc=Get killed while standing on Iron
+achievement.killedBySpace
+achievement.killedBySpace=I Love Spaaaaaaccceee!
+achievement.killedBySpace.desc=Fall out of the World
+achievement.killedByZombie
+achievement.killedByZombie=Shouldn't I Be Undead?
+achievement.killedByZombie.desc=Get your face eaten by a Zombie
+achievement.killedByZombieVillager
+achievement.killedByZombieVillager=I Thought We Were Friends!
+achievement.killedByZombieVillager.desc=Get betrayed by a Zombie Villager
+achievement.killedByZombieVillagerChild
+achievement.killedByZombieVillagerChild=That Kid Just Ate You
+achievement.killedByZombieVillagerChild.desc=Die by a Zombie Villager Child
+achievement.killedByZombieSword
+achievement.killedByZombieSword=They Have Swords!?
+achievement.killedByZombieSword.desc=A Zombie must thrust you with his Sword
+achievement.killedByZombieDiamond
+achievement.killedByZombieDiamond=Gimmie Back My Diamond!
+achievement.killedByZombieDiamond.desc=A Zombie must kill you with a diamond
+achievement.killedBySkeleton
+achievement.killedBySkeleton=Not In The Face!
+achievement.killedBySkeleton.desc=Die by a Skeleton
+achievement.killedBySpider
+achievement.killedBySpider=What? They Can Climb!
+achievement.killedBySpider.desc=Die by a Spider
+achievement.killedByDragon
+achievement.killedByDragon=OMG! A DRAGON!
+achievement.killedByDragon.desc=Be pulverized by a dragon
+achievement.killedByWither
+achievement.killedByWither=Withering Away
+achievement.killedByWither.desc=Have your life drained by a Wither
+achievement.killedByThrownPotion
+achievement.killedByThrownPotion=Chemical Spill
+achievement.killedByThrownPotion.desc=Die from a thrown potion
+achievement.killedByPotion
+achievement.killedByPotion=The Wrong Bottle
+achievement.killedByPotion.desc=Die from drinking a potion
+achievement.killedBySmallSlime
+achievement.killedBySmallSlime=The Little Guy
+achievement.killedBySmallSlime.desc=Die from a harmless little slime(be creative)
+achievement.killedByMediumSlime
+achievement.killedByMediumSlime=Slimed!
+achievement.killedByMediumSlime.desc=Die from a medium sized slime
+achievement.killedByLargeSlime
+achievement.killedByLargeSlime=MEGA SLIMED!
+achievement.killedByLargeSlime.desc=Die from a giant slime
+achievement.killedByHugeSlime
+achievement.killedByHugeSlime=It's Slimezilla!!!
+achievement.killedByHugeSlime.desc=Die from an impossibly huge slime(this one requires mods)
+achievement.killedBySelf
+achievement.killedBySelf=Arrow Roulette
+achievement.killedBySelf.desc=Kill yourself with an arrow
+achievement.mineSand
+achievement.mineSand=Time to Drain the Desert!
+achievement.mineSand.desc=Dig up some sand
+achievement.buildSandstone
+achievement.buildSandstone=I Thought it Stopped Spiders
+achievement.buildSandstone.desc=Make some sandstone
+achievement.mineSnow
+achievement.mineSnow=Time for a Fight???
+achievement.mineSnow.desc=Dig up some snow!
+achievement.mineGlowStoneDust
+achievement.mineGlowStoneDust=Don't Drop in The Lava This Time...
+achievement.mineGlowStoneDust.desc=Mine some glowstone
+achievement.buildGlowStone
+achievement.buildGlowStone=Light it up!
+achievement.buildGlowStone.desc=Make a glowstone block
+achievement.smeltGlass
+achievement.smeltGlass=See Through
+achievement.smeltGlass.desc=Smelt some sand for glass
+achievement.buildGlassPane
+achievement.buildGlassPane=I Can See You Creeper!
+achievement.buildGlassPane.desc=Make a glass pane
+achievement.buildSnow
+achievement.buildSnow=Snow World!
+achievement.buildSnow.desc=Make a snow block
+achievement.mineMushroomBrown
+achievement.mineMushroomBrown=Shouldn't This be Poisonous?
+achievement.mineMushroomBrown.desc=Get a brown mushroom
+achievement.mineMushroomRed
+achievement.mineMushroomRed=Our House..
+achievement.mineMushroomRed.desc=Get a red mushroom
+achievement.makeMushroomStew
+achievement.makeMushroomStew=Stew In A Box
+achievement.makeMushroomStew.desc=Brew some delicious mushroom stew
+achievement.eatMushroomStew
+achievement.eatMushroomStew=Fulfilling
+achievement.eatMushroomStew.desc=Drink your physics-defying stew
+achievement.mineClay
+achievement.mineClay=Potters Delight
+achievement.mineClay.desc=Mine a clay block

@@ -1,0 +1,60 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.0-SNAPSHOT'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'forge'
+
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
+
+version = project.properties['version']
+group = 'org.slave.minecraft'
+archivesBaseName = 'MoarAchivements'
+
+minecraft {
+    version = '1.6.4-9.11.1.964'
+
+    replace(
+            '@VERSION@',
+            project.version
+    )
+}
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod/info'
+        expand 'version': project.version, 'mcversion': project.minecraft.version
+    }
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-api', version: project.properties['sl4j-version']
+    compile group: 'org.slf4j', name: 'slf4j-jdk14', version: project.properties['slf4j-jdk14-version']
+}
+
+task makeSrcJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'src'
+}
+
+task makeDevJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = 'dev'
+}
+
+artifacts {
+    archives makeSrcJar, makeDevJar
+}
