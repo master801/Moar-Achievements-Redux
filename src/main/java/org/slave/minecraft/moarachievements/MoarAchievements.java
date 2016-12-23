@@ -9,14 +9,12 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
-import net.minecraft.stats.StatBase;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import org.slave.minecraft.moarachievements.achievements.pages.AchievementPage;
@@ -61,36 +59,10 @@ public final class MoarAchievements {
     public static Minecraft mc = Minecraft.getMinecraft();
     public static World world = FMLClientHandler.instance().getClient().theWorld;
 
-    public static void addStat(EntityPlayer par1EntityPlayer, StatBase par2StatBase, int par3) {
-        par1EntityPlayer.addStat(
-                par2StatBase,
-                par3
-        );
-    }
-
-    @Deprecated
-    public static void addAchievementLocalizations(Achievement ach, String name, String desc, String langFile) {
-        MoarAchievements.achievementList.add(ach);
-        LanguageRegistry.instance().addStringLocalization(
-                ach.toString(),
-                langFile,
-                name
-        );
-        LanguageRegistry.instance().addStringLocalization(
-                ach.toString() + ".desc",
-                langFile,
-                desc
-        );
-    }
-
     @EventHandler
     public void preInit(final FMLPreInitializationEvent event) {
         MoarAchievements.moarConfiguration = new MoarConfiguration();
         MoarAchievements.moarConfiguration.loadConfig(true);
-
-        for(AchievementPage achievementPage : AchievementPage.values()) {
-            for(Achievement achievement : achievementPage.getAchievementPage().getAchievements()) achievement.registerAchievement();
-        }
 
         MoarAchievements.achievementGetterItem = new ItemAchievementGetter(
                 MoarAchievements.moarConfiguration.getAchievementGetterItemId()
@@ -107,6 +79,19 @@ public final class MoarAchievements {
 
     @EventHandler
     public void load(final FMLInitializationEvent event) {
+        for(AchievementPage achievementPage : AchievementPage.values()) {
+            for(Achievement achievement : achievementPage.getAchievementPage().getAchievements()) {
+                achievement.registerAchievement();
+            }
+        }
+
+        net.minecraftforge.common.AchievementPage.registerAchievementPage(
+                AchievementPage.PAGE_DEATH.getAchievementPage()
+        );
+        net.minecraftforge.common.AchievementPage.registerAchievementPage(
+                AchievementPage.PAGE_TIERED.getAchievementPage()
+        );
+
         MinecraftForge.EVENT_BUS.register(
                 new EventHookContainer()
         );
@@ -114,12 +99,6 @@ public final class MoarAchievements {
                 new CraftingHandler()
         );
         MoarAchievements.commonProxyMA.registerTickers();
-        net.minecraftforge.common.AchievementPage.registerAchievementPage(
-                AchievementPage.PAGE_DEATH.getAchievementPage()
-        );
-        net.minecraftforge.common.AchievementPage.registerAchievementPage(
-                AchievementPage.PAGE_TIERED.getAchievementPage()
-        );
 
         GameRegistry.addRecipe(
                 new ItemStack(

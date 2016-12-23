@@ -19,7 +19,7 @@ public final class AchievementStorageDeath {
             0,
             Item.bone,
             null
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_CREEPER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByCreeper(),
@@ -28,7 +28,7 @@ public final class AchievementStorageDeath {
             0,
             Block.tnt,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ENDERMAN = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByEnderman(),
@@ -37,7 +37,7 @@ public final class AchievementStorageDeath {
             0,
             Block.whiteStone,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ANVIL = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByAnvil(),
@@ -46,7 +46,7 @@ public final class AchievementStorageDeath {
             -1,
             Block.anvil,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_WALL = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByWall(),
@@ -55,7 +55,7 @@ public final class AchievementStorageDeath {
             -1,
             Block.gravel,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_FLAME = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByFlame(),
@@ -64,7 +64,7 @@ public final class AchievementStorageDeath {
             -1,
             Item.fireballCharge,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_FIRE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByFire(),
@@ -73,7 +73,7 @@ public final class AchievementStorageDeath {
             -1,
             Block.fire,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_BLAZE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByBlaze(),
@@ -82,7 +82,7 @@ public final class AchievementStorageDeath {
             -1,
             Item.blazeRod,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_GHAST = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByGhast(),
@@ -91,7 +91,7 @@ public final class AchievementStorageDeath {
             -2,
             Item.ghastTear,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_FALL = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByFall(),
@@ -100,7 +100,7 @@ public final class AchievementStorageDeath {
             -2,
             Item.brick,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_FIRE_DISPENSER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByFireDispenser(),
@@ -109,7 +109,7 @@ public final class AchievementStorageDeath {
             -2,
             Block.dispenser,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ARROW_DISPENSER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByArrowDispenser(),
@@ -118,7 +118,7 @@ public final class AchievementStorageDeath {
             -2,
             Block.dispenser,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_WATER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByWater(),
@@ -127,7 +127,7 @@ public final class AchievementStorageDeath {
             -2,
             Block.waterStill,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_IRON = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByIron(),
@@ -136,7 +136,7 @@ public final class AchievementStorageDeath {
             -2,
             Block.blockIron,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_SPACE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledBySpace(),
@@ -145,7 +145,7 @@ public final class AchievementStorageDeath {
             -2,
             Block.bedrock,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ZOMBIE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByZombie(),
@@ -154,7 +154,7 @@ public final class AchievementStorageDeath {
             -3,
             Item.rottenFlesh,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ZOMBIE_VILLAGER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByZombieVillager(),
@@ -163,7 +163,7 @@ public final class AchievementStorageDeath {
             -3,
             Item.emerald,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ZOMBIE_VILLAGER_CHILD = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByZombieVillagerChild(),
@@ -172,7 +172,7 @@ public final class AchievementStorageDeath {
             -3,
             Block.plantRed,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ZOMBIE_SWORD = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByZombieSword(),
@@ -181,7 +181,7 @@ public final class AchievementStorageDeath {
             -4,
             Item.swordIron,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ZOMBIE_DIAMOND = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByZombieDiamond(),
@@ -190,7 +190,7 @@ public final class AchievementStorageDeath {
             -4,
             Item.diamond,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_SKELETON = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledBySkeleton(),
@@ -199,7 +199,7 @@ public final class AchievementStorageDeath {
             -4,
             Item.arrow,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_SPIDER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledBySpider(),
@@ -208,7 +208,7 @@ public final class AchievementStorageDeath {
             -4,
             Item.spiderEye,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_DRAGON = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByDragon(),
@@ -217,7 +217,7 @@ public final class AchievementStorageDeath {
             -4,
             Block.endPortalFrame,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_WITHER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByWither(),
@@ -226,7 +226,7 @@ public final class AchievementStorageDeath {
             -4,
             Block.skull,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_THROWN_POTION = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByThrownPotion(),
@@ -235,7 +235,7 @@ public final class AchievementStorageDeath {
             -4,
             Item.potion,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_POTION = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByPotion(),
@@ -244,7 +244,7 @@ public final class AchievementStorageDeath {
             -5,
             Item.potion,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_SMALL_SLIME = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledBySmallSlime(),
@@ -253,7 +253,7 @@ public final class AchievementStorageDeath {
             -5,
             Item.slimeBall,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_MEDIUM_SLIME = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByMediumSlime(),
@@ -262,7 +262,7 @@ public final class AchievementStorageDeath {
             -5,
             Item.slimeBall,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_LARGE_SLIME = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByLargeSlime(),
@@ -271,7 +271,7 @@ public final class AchievementStorageDeath {
             -5,
             Item.slimeBall,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_HUGE_SLIME = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledByHugeSlime(),
@@ -280,7 +280,7 @@ public final class AchievementStorageDeath {
             -5,
             Item.slimeBall,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_SELF = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKilledBySelf(),
@@ -289,6 +289,6 @@ public final class AchievementStorageDeath {
             1,
             Item.arrow,
             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
-    ).registerAchievement();
+    );
 
 }

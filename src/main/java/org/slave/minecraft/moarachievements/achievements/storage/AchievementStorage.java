@@ -20,7 +20,7 @@ public final class AchievementStorage {
             -3,
             Item.shovelWood,
             AchievementList.buildWorkBench
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_AXE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeAxe(),
@@ -29,7 +29,7 @@ public final class AchievementStorage {
             -1,
             Item.axeWood,
             AchievementList.buildWorkBench
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_IRON_PICK_AXE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeIronPickaxe(),
@@ -38,7 +38,7 @@ public final class AchievementStorage {
             2,
             Item.pickaxeIron,
             AchievementList.buildBetterPickaxe
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_GOLD_PICK_AXE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeGoldPickaxe(),
@@ -47,7 +47,7 @@ public final class AchievementStorage {
             4,
             Item.pickaxeGold,
             AchievementStorage.ACHIEVEMENT_MAKE_IRON_PICK_AXE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_DIAMOND_PICK_AXE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeDiamondPickaxe(),
@@ -56,7 +56,7 @@ public final class AchievementStorage {
             2,
             Item.pickaxeDiamond,
             AchievementStorage.ACHIEVEMENT_MAKE_IRON_PICK_AXE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_REDSTONE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineRedstone(),
@@ -65,7 +65,7 @@ public final class AchievementStorage {
             6,
             Item.redstone,
             AchievementStorage.ACHIEVEMENT_MAKE_IRON_PICK_AXE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_DISPENSER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeDispenser(),
@@ -74,7 +74,7 @@ public final class AchievementStorage {
             12,
             Block.dispenser,
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_NOTEBLOCK = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeNoteBlock(),
@@ -83,7 +83,7 @@ public final class AchievementStorage {
             10,
             Block.music,
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_PISTON = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakePiston(),
@@ -92,7 +92,7 @@ public final class AchievementStorage {
             12,
             Block.pistonBase,
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_STICKY_PISTON = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeStickyPiston(),
@@ -101,7 +101,7 @@ public final class AchievementStorage {
             12,
             Block.pistonStickyBase,
             AchievementStorage.ACHIEVEMENT_MAKE_PISTON
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_REDSTONE_TORCH = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeRedstoneTorch(),
@@ -110,7 +110,7 @@ public final class AchievementStorage {
             10,
             Block.torchRedstoneActive,
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_REDSTONE_REPEATER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeRedstoneRepeater(),
@@ -119,7 +119,7 @@ public final class AchievementStorage {
             10,
             Item.redstoneRepeater,
             AchievementStorage.ACHIEVEMENT_MAKE_REDSTONE_TORCH
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_CLOCK = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeClock(),
@@ -128,7 +128,7 @@ public final class AchievementStorage {
             8,
             Item.pocketSundial,
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_JUKEBOX = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeJukebox(),
@@ -137,7 +137,7 @@ public final class AchievementStorage {
             14,
             Block.jukebox,
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_COMPASS = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeCompass(),
@@ -146,7 +146,7 @@ public final class AchievementStorage {
             6,
             Item.compass,
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_COLLECT_RED_APPLE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdCollectRedApple(),
@@ -155,7 +155,7 @@ public final class AchievementStorage {
             -4,
             Item.appleRed,
             AchievementStorage.ACHIEVEMENT_MAKE_AXE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_GOLDEN_APPLE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeGoldenApple(),
@@ -164,7 +164,7 @@ public final class AchievementStorage {
             -6,
             Item.goldNugget,
             AchievementStorage.ACHIEVEMENT_COLLECT_RED_APPLE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_COOKIE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeCookie(),
@@ -173,7 +173,7 @@ public final class AchievementStorage {
             -6,
             Item.cookie,
             AchievementStorage.ACHIEVEMENT_COLLECT_RED_APPLE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_CHEST = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeChest(),
@@ -182,7 +182,7 @@ public final class AchievementStorage {
             -5,
             Block.chest,
             AchievementStorage.ACHIEVEMENT_MAKE_AXE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_COAL = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineCoal(),
@@ -191,7 +191,7 @@ public final class AchievementStorage {
             4,
             Item.coal,
             AchievementList.buildPickaxe
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_SMELT_COBBLESTONE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementSmeltCobblestone(),
@@ -200,7 +200,7 @@ public final class AchievementStorage {
             6,
             Block.stone,
             AchievementList.buildFurnace
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_FLINT_AND_IRON = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeFlintAndIron(),
@@ -209,7 +209,7 @@ public final class AchievementStorage {
             7,
             Item.flintAndSteel,
             AchievementList.acquireIron
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_SHEARS = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeShears(),
@@ -218,7 +218,7 @@ public final class AchievementStorage {
             2,
             Item.shears,
             AchievementList.acquireIron
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_COLLECT_WOOL = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdCollectWool(),
@@ -227,7 +227,7 @@ public final class AchievementStorage {
             3,
             Block.cloth,
             AchievementStorage.ACHIEVEMENT_MAKE_SHEARS
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_BED = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeBed(),
@@ -236,7 +236,7 @@ public final class AchievementStorage {
             1,
             Item.bed,
             AchievementStorage.ACHIEVEMENT_COLLECT_WOOL
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_ENTER_CAVE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdEnterCave(),
@@ -245,7 +245,7 @@ public final class AchievementStorage {
             1,
             Block.bedrock,
             AchievementList.killEnemy
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILL_SPIDER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKillSpider(),
@@ -254,7 +254,7 @@ public final class AchievementStorage {
             1,
             Item.silk,
             AchievementStorage.ACHIEVEMENT_ENTER_CAVE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILL_SKELETON = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKillSkeleton(),
@@ -263,7 +263,7 @@ public final class AchievementStorage {
             1,
             Item.arrow,
             AchievementStorage.ACHIEVEMENT_KILL_SPIDER
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILL_SLIME = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKillSlime(),
@@ -272,7 +272,7 @@ public final class AchievementStorage {
             -1,
             Item.slimeBall,
             AchievementStorage.ACHIEVEMENT_KILL_SPIDER
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILL_ENDERMAN = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKillEnderman(),
@@ -281,7 +281,7 @@ public final class AchievementStorage {
             0,
             Item.enderPearl,
             AchievementList.buildSword
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILL_PASSIVE_MOB_FOR_MEAT = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKillPassiveMobForMeat(),
@@ -290,7 +290,7 @@ public final class AchievementStorage {
             -2,
             Item.porkRaw,
             AchievementList.buildSword
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_BOW = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeBow(),
@@ -299,7 +299,7 @@ public final class AchievementStorage {
             -3,
             Item.bow,
             AchievementStorage.ACHIEVEMENT_KILL_SPIDER
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_EAT_BACON = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdEatBacon(),
@@ -308,7 +308,7 @@ public final class AchievementStorage {
             -4,
             Item.porkCooked,
             AchievementStorage.ACHIEVEMENT_KILL_PASSIVE_MOB_FOR_MEAT
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_COLLECT_EGG = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdCollectEgg(),
@@ -317,7 +317,7 @@ public final class AchievementStorage {
             -4,
             Item.egg,
             AchievementStorage.ACHIEVEMENT_KILL_PASSIVE_MOB_FOR_MEAT
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_DIRT = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineDirt(),
@@ -326,7 +326,7 @@ public final class AchievementStorage {
             0,
             Block.dirt,
             AchievementList.openInventory
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_COBBLESTONE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineCobblestone(),
@@ -335,7 +335,7 @@ public final class AchievementStorage {
             -2,
             Block.cobblestone,
             AchievementStorage.ACHIEVEMENT_MINE_DIRT
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_CACTUS = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineCactus(),
@@ -344,7 +344,7 @@ public final class AchievementStorage {
             2,
             Block.cactus,
             AchievementStorage.ACHIEVEMENT_MINE_DIRT
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_SOUL_SAND = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineSoulSand(),
@@ -353,7 +353,7 @@ public final class AchievementStorage {
             10,
             Block.slowSand,
             AchievementList.portal
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_NETHER_WART = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineNetherWart(),
@@ -362,7 +362,7 @@ public final class AchievementStorage {
             12,
             Item.netherStalkSeeds,
             AchievementStorage.ACHIEVEMENT_MINE_SOUL_SAND
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_NETHERRACK = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineNetherrack(),
@@ -371,7 +371,7 @@ public final class AchievementStorage {
             9,
             Block.netherrack,
             AchievementList.portal
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_BREWING_STAND = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeBrewingStand(),
@@ -380,7 +380,7 @@ public final class AchievementStorage {
             12,
             Block.brewingStand,
             AchievementList.blazeRod
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_SUGAR_CANE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineSugarCane(),
@@ -389,7 +389,7 @@ public final class AchievementStorage {
             -7,
             Item.reed,
             AchievementList.buildHoe
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_PAPER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakePaper(),
@@ -398,7 +398,7 @@ public final class AchievementStorage {
             -7,
             Item.paper,
             AchievementStorage.ACHIEVEMENT_MINE_SUGAR_CANE
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_MAP = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeMap(),
@@ -407,7 +407,7 @@ public final class AchievementStorage {
             -7,
             Item.map,
             AchievementStorage.ACHIEVEMENT_MAKE_PAPER
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_DRAGON_EGG = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineDragonEgg(),
@@ -416,7 +416,7 @@ public final class AchievementStorage {
             10,
             Block.dragonEgg,
             AchievementList.theEnd2
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MINE_WHEAT = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineWheat(),
@@ -425,7 +425,7 @@ public final class AchievementStorage {
             -5,
             Item.wheat,
             AchievementList.buildHoe
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_LIVE_FALLING = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdLiveFalling(),
@@ -434,7 +434,7 @@ public final class AchievementStorage {
             -1,
             Item.feather,
             null
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILL_ZOMBIE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKillZombie(),
@@ -443,7 +443,7 @@ public final class AchievementStorage {
             -5,
             Item.rottenFlesh,
             AchievementStorage.ACHIEVEMENT_MAKE_BOW
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_KILL_CREEPER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdKillCreeper(),
@@ -452,7 +452,7 @@ public final class AchievementStorage {
             -3,
             Item.gunpowder,
             AchievementStorage.ACHIEVEMENT_MAKE_BOW
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_MAKE_TNT = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeTnt(),
@@ -461,7 +461,7 @@ public final class AchievementStorage {
             -2,
             Block.tnt,
             AchievementStorage.ACHIEVEMENT_KILL_CREEPER
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_GET_SKELETON_TO_KILL_CREEPER = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdGetSkeletonToKillCreeper(),
@@ -470,7 +470,7 @@ public final class AchievementStorage {
             -3,
             Item.record13,
             AchievementStorage.ACHIEVEMENT_KILL_CREEPER
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_LEVEL_1 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdLevel1(),
@@ -479,7 +479,7 @@ public final class AchievementStorage {
             3,
             Item.swordWood,
             null
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_LEVEL_2 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdLevel2(),
@@ -488,7 +488,7 @@ public final class AchievementStorage {
             3,
             Item.swordWood,
             AchievementStorage.ACHIEVEMENT_LEVEL_1
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_LEVEL_3 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdLevel3(),
@@ -497,7 +497,7 @@ public final class AchievementStorage {
             4,
             Item.swordWood,
             AchievementStorage.ACHIEVEMENT_LEVEL_2
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_LEVEL_4 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdLevel4(),
@@ -506,7 +506,7 @@ public final class AchievementStorage {
             4,
             Item.swordWood,
             AchievementStorage.ACHIEVEMENT_LEVEL_3
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_LEVEL_5 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdLevel5(),
@@ -515,7 +515,7 @@ public final class AchievementStorage {
             4,
             Item.swordStone,
             AchievementStorage.ACHIEVEMENT_LEVEL_4
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_LEVEL_10 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdLevel10(),
@@ -524,7 +524,7 @@ public final class AchievementStorage {
             5,
             Item.swordStone,
             AchievementStorage.ACHIEVEMENT_LEVEL_5
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_OBSIDIAN_1 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdObsidian1(),
@@ -533,7 +533,7 @@ public final class AchievementStorage {
             12,
             Block.obsidian,
             null
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_OBSIDIAN_2 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdObsidian2(),
@@ -542,7 +542,7 @@ public final class AchievementStorage {
             12,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_1
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_OBSIDIAN_3 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdObsidian3(),
@@ -551,7 +551,7 @@ public final class AchievementStorage {
             11,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_2
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_OBSIDIAN_4 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdObsidian4(),
@@ -560,7 +560,7 @@ public final class AchievementStorage {
             10,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_3
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_OBSIDIAN_5 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdObsidian5(),
@@ -569,7 +569,7 @@ public final class AchievementStorage {
             9,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_4
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_OBSIDIAN_6 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdObsidian6(),
@@ -578,7 +578,7 @@ public final class AchievementStorage {
             9,
             Block.portal,
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_5
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_OBSIDIAN_7 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdObsidian7(),
@@ -587,7 +587,7 @@ public final class AchievementStorage {
             10,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_6
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_OBSIDIAN_8 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdObsidian8(),
@@ -596,7 +596,7 @@ public final class AchievementStorage {
             9,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_7
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_OBSIDIAN_9 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdObsidian9(),
@@ -605,7 +605,7 @@ public final class AchievementStorage {
             8,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_8
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_OBSIDIAN_10 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdObsidian10(),
@@ -614,7 +614,7 @@ public final class AchievementStorage {
             8,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_9
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_1 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal1(),
@@ -623,7 +623,7 @@ public final class AchievementStorage {
             12,
             Block.obsidian,
             null
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_2 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal2(),
@@ -632,7 +632,7 @@ public final class AchievementStorage {
             12,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_PORTAL_1
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_3 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal3(),
@@ -641,7 +641,7 @@ public final class AchievementStorage {
             11,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_PORTAL_2
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_4 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal4(),
@@ -650,7 +650,7 @@ public final class AchievementStorage {
             10,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_PORTAL_3
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_5 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal5(),
@@ -659,7 +659,7 @@ public final class AchievementStorage {
             9,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_PORTAL_4
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_6 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal6(),
@@ -668,7 +668,7 @@ public final class AchievementStorage {
             11,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_PORTAL_5
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_7 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal7(),
@@ -677,7 +677,7 @@ public final class AchievementStorage {
             10,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_PORTAL_6
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_8 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal8(),
@@ -686,7 +686,7 @@ public final class AchievementStorage {
             9,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_PORTAL_7
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_9 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal9(),
@@ -695,7 +695,7 @@ public final class AchievementStorage {
             8,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_PORTAL_8
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_10 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal10(),
@@ -704,7 +704,7 @@ public final class AchievementStorage {
             8,
             Block.obsidian,
             AchievementStorage.ACHIEVEMENT_PORTAL_9
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_11 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal11(),
@@ -713,7 +713,7 @@ public final class AchievementStorage {
             11,
             Block.portal,
             AchievementStorage.ACHIEVEMENT_PORTAL_10
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_12 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal12(),
@@ -722,7 +722,7 @@ public final class AchievementStorage {
             10,
             Block.portal,
             AchievementStorage.ACHIEVEMENT_PORTAL_11
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_13 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal13(),
@@ -731,7 +731,7 @@ public final class AchievementStorage {
             9,
             Block.portal,
             AchievementStorage.ACHIEVEMENT_PORTAL_12
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_14 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal14(),
@@ -740,7 +740,7 @@ public final class AchievementStorage {
             11,
             Block.portal,
             AchievementStorage.ACHIEVEMENT_PORTAL_13
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_15 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal15(),
@@ -749,7 +749,7 @@ public final class AchievementStorage {
             10,
             Block.portal,
             AchievementStorage.ACHIEVEMENT_PORTAL_14
-    ).registerAchievement();
+    );
 
     public static final Achievement ACHIEVEMENT_PORTAL_16 = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdPortal16(),
@@ -758,6 +758,6 @@ public final class AchievementStorage {
             9,
             Block.portal,
             AchievementStorage.ACHIEVEMENT_PORTAL_15
-    ).registerAchievement();
+    );
 
 }

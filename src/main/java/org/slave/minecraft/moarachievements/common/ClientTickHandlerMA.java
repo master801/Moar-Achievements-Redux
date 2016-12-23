@@ -68,50 +68,38 @@ public final class ClientTickHandlerMA implements ITickHandler {
     private void checkPlayerLevel() {
         if (MoarAchievements.entityPlayer != null) {
             if (MoarAchievements.entityPlayer.experienceLevel >= 1) {
-                MoarAchievements.addStat(
-                        MoarAchievements.entityPlayer,
-                        AchievementStorage.ACHIEVEMENT_LEVEL_1,
-                        1
+                MoarAchievements.entityPlayer.triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_LEVEL_1
                 );
             }
 
             if (MoarAchievements.entityPlayer.experienceLevel >= 2) {
-                MoarAchievements.addStat(
-                        MoarAchievements.entityPlayer,
-                        AchievementStorage.ACHIEVEMENT_LEVEL_2,
-                        1
+                MoarAchievements.entityPlayer.triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_LEVEL_2
                 );
             }
 
             if (MoarAchievements.entityPlayer.experienceLevel >= 3) {
-                MoarAchievements.addStat(
-                        MoarAchievements.entityPlayer,
-                        AchievementStorage.ACHIEVEMENT_LEVEL_3,
-                        1
+                MoarAchievements.entityPlayer.triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_LEVEL_3
                 );
             }
 
             if (MoarAchievements.entityPlayer.experienceLevel >= 4) {
-                MoarAchievements.addStat(
-                        MoarAchievements.entityPlayer,
-                        AchievementStorage.ACHIEVEMENT_LEVEL_4,
-                        1
+                MoarAchievements.entityPlayer.triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_LEVEL_4
                 );
             }
 
             if (MoarAchievements.entityPlayer.experienceLevel >= 5) {
-                MoarAchievements.addStat(
-                        MoarAchievements.entityPlayer,
-                        AchievementStorage.ACHIEVEMENT_LEVEL_5,
-                        1
+                MoarAchievements.entityPlayer.triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_LEVEL_5
                 );
             }
 
             if (MoarAchievements.entityPlayer.experienceLevel >= 10) {
-                MoarAchievements.addStat(
-                        MoarAchievements.entityPlayer,
-                        AchievementStorage.ACHIEVEMENT_LEVEL_10,
-                        1
+                MoarAchievements.entityPlayer.triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_LEVEL_10
                 );
             }
         }
@@ -122,10 +110,8 @@ public final class ClientTickHandlerMA implements ITickHandler {
         player = FMLClientHandler.instance().getClient().thePlayer;
         world = FMLClientHandler.instance().getClient().theWorld;
         if (MoarAchievements.entityPlayer != null && world != null && player.posY <= 55.0D && world.getBlockLightValue((int)player.posX, (int)player.posY, (int)player.posZ) <= 5) {
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_ENTER_CAVE,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_ENTER_CAVE
             );
         }
     }
@@ -139,10 +125,8 @@ public final class ClientTickHandlerMA implements ITickHandler {
                 if (MoarAchievements.entityPlayer != null) {
                     if (chieve.statId == AchievementStorage.ACHIEVEMENT_LIVE_FALLING.statId) {
                         if (playerDiedRecently) return;
-                        MoarAchievements.addStat(
-                                MoarAchievements.entityPlayer,
-                                chieve,
-                                1
+                        MoarAchievements.entityPlayer.triggerAchievement(
+                                chieve
                         );
                     }
                     MoarAchievements.entityPlayer.addStat(
@@ -186,131 +170,98 @@ public final class ClientTickHandlerMA implements ITickHandler {
 
     private void checkObsidian() {
         if (obsidianChieve >= 1) {
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_1,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_1
             );
         }
 
         if (obsidianChieve >= 2) {
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_2,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_2
             );
         }
 
         if (obsidianChieve >= 3) {
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_3,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_3
             );
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_4,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_4
             );
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_5,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_5
             );
         }
 
         if (obsidianChieve >= 4) {
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_6,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_6
             );
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_7,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_7
             );
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_8,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_8
             );
         }
 
         if (obsidianChieve >= 5) {
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_9,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_9
             );
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_10,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_10
             );
         }
 
         if (obsidianChieve >= 6) {
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_PORTAL_11,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_PORTAL_11
             );
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_PORTAL_12,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_PORTAL_12
             );
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_PORTAL_13,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_PORTAL_13
             );
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_PORTAL_14,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_PORTAL_14
             );
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_PORTAL_15,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_PORTAL_15
             );
-            MoarAchievements.addStat(
-                    MoarAchievements.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_PORTAL_16,
-                    1
+            MoarAchievements.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_PORTAL_16
             );
         }
-
     }
 
-    public void setPassback(int posX, int posY, int posZ) {
-        int blockNum = MoarAchievements.mc.theWorld.getBlockId(posX, posY, posZ);
+    public void setPassback(final World world, final int posX, final int posY, final int posZ) {
+        int blockNum = world.getBlockId(posX, posY, posZ);
         if (blockNum == Block.obsidian.blockID) {
             if (obsidianPlaced >= 0 && obsidianChieve < 1) {
                 obsidianChieve = 1;
             } else if (obsidianPlaced >= 1 && obsidianChieve < 2) {
-                if (MoarAchievements.mc.theWorld.getBlockId(posX + 1, posY, posZ) == Block.obsidian.blockID || MoarAchievements.mc.theWorld.getBlockId(posX - 1, posY, posZ) == Block.obsidian.blockID || MoarAchievements.mc.theWorld.getBlockId(posX, posY, posZ + 1) == Block.obsidian.blockID || MoarAchievements.mc.theWorld.getBlockId(posX, posY, posZ - 1) == Block.obsidian.blockID) {
+                if (world.getBlockId(posX + 1, posY, posZ) == Block.obsidian.blockID || world.getBlockId(posX - 1, posY, posZ) == Block.obsidian.blockID || world.getBlockId(posX, posY, posZ + 1) == Block.obsidian.blockID || world.getBlockId(posX, posY, posZ - 1) == Block.obsidian.blockID) {
                     obsidianChieve = 2;
                 }
             } else if (obsidianPlaced >= 4 && obsidianChieve < 3) {
-                if (MoarAchievements.mc.theWorld.getBlockId(posX, posY + 1, posZ) == Block.obsidian.blockID && MoarAchievements.mc.theWorld.getBlockId(posX, posY - 1, posZ) == Block.obsidian.blockID || MoarAchievements.mc.theWorld.getBlockId(posX, posY + 1, posZ) == Block.obsidian.blockID && MoarAchievements.mc.theWorld.getBlockId(posX, posY + 2, posZ) == Block.obsidian.blockID || MoarAchievements.mc.theWorld.getBlockId(posX, posY - 1, posZ) == Block.obsidian.blockID && MoarAchievements.mc.theWorld.getBlockId(posX, posY - 2, posZ) == Block.obsidian.blockID) {
+                if (world.getBlockId(posX, posY + 1, posZ) == Block.obsidian.blockID && world.getBlockId(posX, posY - 1, posZ) == Block.obsidian.blockID || world.getBlockId(posX, posY + 1, posZ) == Block.obsidian.blockID && world.getBlockId(posX, posY + 2, posZ) == Block.obsidian.blockID || world.getBlockId(posX, posY - 1, posZ) == Block.obsidian.blockID && world.getBlockId(posX, posY - 2, posZ) == Block.obsidian.blockID) {
                     tempX1 = posX;
                     tempZ1 = posZ;
                     obsidianChieve = 3;
                 }
             } else if (obsidianPlaced >= 7 && obsidianChieve < 4) {
-                if (MoarAchievements.mc.theWorld.getBlockId(posX, posY + 1, posZ) == Block.obsidian.blockID && MoarAchievements.mc.theWorld.getBlockId(posX, posY - 1, posZ) == Block.obsidian.blockID || MoarAchievements.mc.theWorld.getBlockId(posX, posY + 1, posZ) == Block.obsidian.blockID && MoarAchievements.mc.theWorld.getBlockId(posX, posY + 2, posZ) == Block.obsidian.blockID || MoarAchievements.mc.theWorld.getBlockId(posX, posY - 1, posZ) == Block.obsidian.blockID && MoarAchievements.mc.theWorld.getBlockId(posX, posY - 2, posZ) == Block.obsidian.blockID && tempX1 != posX || tempZ1 != posZ) {
+                if (world.getBlockId(posX, posY + 1, posZ) == Block.obsidian.blockID && world.getBlockId(posX, posY - 1, posZ) == Block.obsidian.blockID || world.getBlockId(posX, posY + 1, posZ) == Block.obsidian.blockID && world.getBlockId(posX, posY + 2, posZ) == Block.obsidian.blockID || world.getBlockId(posX, posY - 1, posZ) == Block.obsidian.blockID && world.getBlockId(posX, posY - 2, posZ) == Block.obsidian.blockID && tempX1 != posX || tempZ1 != posZ) {
                     obsidianChieve = 4;
                 }
-            } else if (obsidianPlaced >= 9 && obsidianChieve < 5 && (MoarAchievements.mc.theWorld.getBlockId(posX + 1, posY, posZ) == Block.obsidian.blockID || MoarAchievements.mc.theWorld.getBlockId(posX - 1, posY, posZ) == Block.obsidian.blockID || MoarAchievements.mc.theWorld.getBlockId(posX, posY, posZ + 1) == Block.obsidian.blockID || MoarAchievements.mc.theWorld.getBlockId(posX, posY, posZ - 1) == Block.obsidian.blockID)) {
+            } else if (obsidianPlaced >= 9 && obsidianChieve < 5 && (world.getBlockId(posX + 1, posY, posZ) == Block.obsidian.blockID || world.getBlockId(posX - 1, posY, posZ) == Block.obsidian.blockID || world.getBlockId(posX, posY, posZ + 1) == Block.obsidian.blockID || world.getBlockId(posX, posY, posZ - 1) == Block.obsidian.blockID)) {
                 obsidianChieve = 5;
             }
             ++obsidianPlaced;
         }
 
-        if (blockNum == Block.fire.blockID && obsidianChieve == 5 && MoarAchievements.mc.theWorld.getBlockId(posX, posY - 1, posZ) == Block.obsidian.blockID) {
+        if (blockNum == Block.fire.blockID && obsidianChieve == 5 && world.getBlockId(posX, posY - 1, posZ) == Block.obsidian.blockID) {
             obsidianChieve = 6;
         }
     }

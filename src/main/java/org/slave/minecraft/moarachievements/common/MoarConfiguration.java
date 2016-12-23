@@ -13,8 +13,6 @@ public final class MoarConfiguration {
 
     private static final String CATEGORY_ACHIEVEMENT_ID = "achievementIds";
 
-    private static int fallBackAchievementId = 1000;
-
     private Configuration configuration;
 
     private int achievementGetterItemId;
@@ -37,7 +35,7 @@ public final class MoarConfiguration {
     private int achievementIdCollectRedApple;
     private int achievementIdMakeGoldenApple;
     private int achievementIdMakeCookie;
-    private int achievementIDMakeChest;
+    private int achievementIdMakeChest;
     private int achievementIdMineCoal;
     private int achievementIdSmeltCobblestone;
     private int achievementIdMakeFlintAndIron;
@@ -172,9 +170,7 @@ public final class MoarConfiguration {
         achievementGetterItemId = configuration.getItem(
                 "achievementGetter",
                 4000
-        ).getInt(
-                8000
-        );
+        ).getInt();
 
 
         achievementIdMakeShovel = configuration.get(
@@ -185,642 +181,642 @@ public final class MoarConfiguration {
         achievementIdMakeAxe = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
                 "achievementIdMakeAxe",
-                6000
+                6001
         ).getInt();
         achievementIdMakeIronPickaxe = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
                 "achievementIdMakeIronPickaxe",
-                6000
+                6002
         ).getInt();
         achievementIdMakeGoldPickaxe = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
                 "achievementIdMakeGoldPickaxe",
-                6000
+                6003
         ).getInt();
         achievementIdMakeDiamondPickaxe = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
                 "achievementIdMakeDiamondPickaxe",
-                6000
+                6004
         ).getInt();
         achievementIdMineRedstone = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
                 "achievementIdMineRedstone",
-                6000
+                6005
         ).getInt();
         achievementIdMakeDispenser = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeDispenser",
+                6006
         ).getInt();
         achievementIdMakeNoteBlock = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeNoteBlock",
+                6007
         ).getInt();
         achievementIdMakePiston = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakePiston",
+                6008
         ).getInt();
         achievementIdMakeStickyPiston = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeStickyPiston",
+                6009
         ).getInt();
         achievementIdMakeRedstoneTorch = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeRedstoneTorch",
+                6010
         ).getInt();
         achievementIdMakeRedstoneRepeater = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeRedstoneRepeater",
+                6011
         ).getInt();
         achievementIdMakeClock = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeClock",
+                6012
         ).getInt();
         achievementIdMakeJukebox = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeJukebox",
+                6013
         ).getInt();
         achievementIdMakeCompass = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeCompass",
+                6014
         ).getInt();
         achievementIdCollectRedApple = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdCollectRedApple",
+                6015
         ).getInt();
         achievementIdMakeGoldenApple = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeGoldenApple",
+                6016
         ).getInt();
         achievementIdMakeCookie = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeCookie",
+                6017
         ).getInt();
-        achievementIDMakeChest = configuration.get(
+        achievementIdMakeChest = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIDMakeChest",
+                6018
         ).getInt();
         achievementIdMineCoal = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineCoal",
+                6019
         ).getInt();
         achievementIdSmeltCobblestone = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdSmeltCobblestone",
+                6020
         ).getInt();
         achievementIdMakeFlintAndIron = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeFlintAndIron",
+                6021
         ).getInt();
         achievementIdMakeShears = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeShears",
+                6022
         ).getInt();
         achievementIdCollectWool = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdCollectWool",
+                6023
         ).getInt();
         achievementIdMakeBed = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeBed",
+                6024
         ).getInt();
         achievementIdEnterCave = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdEnterCave",
+                6025
         ).getInt();
         achievementIdKillSpider = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKillSpider",
+                6026
         ).getInt();
         achievementIdKillSkeleton = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKillSkeleton",
+                6027
         ).getInt();
         achievementIdKillSlime = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKillSlime",
+                6028
         ).getInt();
         achievementIdKillEnderman = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKillEnderman",
+                6029
         ).getInt();
         achievementIdKillPassiveMobForMeat = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKillPassiveMobForMeat",
+                6030
         ).getInt();
         achievementIdMakeBow = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeBow",
+                6031
         ).getInt();
         achievementIdEatBacon = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdEatBacon",
+                6032
         ).getInt();
         achievementIdCollectEgg = configuration.get(
-                "",
-                "",
-                6000
+                MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
+                "achievementIdCollectEgg",
+                6033
         ).getInt();
         achievementIdMineDirt = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineDirt",
+                6034
         ).getInt();
         achievementIdMineCobblestone = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineCobblestone",
+                6035
         ).getInt();
         achievementIdMineCactus = configuration.get(
-                "",
-                "",
-                6000
+                MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
+                "achievementIdMineCactus",
+                6036
         ).getInt();
         achievementIdMineSoulSand = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineSoulSand",
+                6037
         ).getInt();
         achievementIdMineNetherWart = configuration.get(
-                "",
-                "",
-                6000
+                MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
+                "achievementIdMineNetherWart",
+                6038
         ).getInt();
         achievementIdMineNetherrack = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineNetherrack",
+                6039
         ).getInt();
         achievementIdMakeBrewingStand = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeBrewingStand",
+                6040
         ).getInt();
         achievementIdMineSugarCane = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineSugarCane",
+                6041
         ).getInt();
         achievementIdMakePaper = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakePaper",
+                6042
         ).getInt();
         achievementIdMakeMap = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeMap",
+                6043
         ).getInt();
         achievementIdMineDragonEgg = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineDragonEgg",
+                6044
         ).getInt();
         achievementIdMineWheat = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineWheat",
+                6045
         ).getInt();
         achievementIdLiveFalling = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdLiveFalling",
+                6046
         ).getInt();
         achievementIdKillZombie = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKillZombie",
+                6047
         ).getInt();
         achievementIdKillCreeper = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKillCreeper",
+                6048
         ).getInt();
         achievementIdMakeTnt = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeTnt",
+                6049
         ).getInt();
         achievementIdGetSkeletonToKillCreeper = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdGetSkeletonToKillCreeper",
+                6050
         ).getInt();
         achievementIdLevel1 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdLevel1",
+                6051
         ).getInt();
         achievementIdLevel2 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdLevel2",
+                6052
         ).getInt();
         achievementIdLevel3 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdLevel3",
+                6053
         ).getInt();
         achievementIdLevel4 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdLevel4",
+                6054
         ).getInt();
         achievementIdLevel5 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdLevel5",
+                6055
         ).getInt();
         achievementIdLevel10 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdLevel10",
+                6056
         ).getInt();
         achievementIdObsidian1 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdObsidian1",
+                6057
         ).getInt();
         achievementIdObsidian2 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdObsidian2",
+                6058
         ).getInt();
         achievementIdObsidian3 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdObsidian3",
+                6059
         ).getInt();
         achievementIdObsidian4 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdObsidian4",
+                6060
         ).getInt();
         achievementIdObsidian5 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdObsidian5",
+                6061
         ).getInt();
         achievementIdObsidian6 = configuration.get(
-                "",
-                "",
-                6000
+                MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
+                "achievementIdObsidian6",
+                6062
         ).getInt();
         achievementIdObsidian7 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdObsidian7",
+                6063
         ).getInt();
         achievementIdObsidian8 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdObsidian8",
+                6064
         ).getInt();
         achievementIdObsidian9 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdObsidian9",
+                6065
         ).getInt();
         achievementIdObsidian10 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdObsidian10",
+                6066
         ).getInt();
         achievementIdPortal1 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal1",
+                6067
         ).getInt();
         achievementIdPortal2 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal2",
+                6068
         ).getInt();
         achievementIdPortal3 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal3",
+                6069
         ).getInt();
         achievementIdPortal4 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal4",
+                6070
         ).getInt();
         achievementIdPortal5 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal5",
+                6071
         ).getInt();
         achievementIdPortal6 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal6",
+                6072
         ).getInt();
         achievementIdPortal7 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal7",
+                6073
         ).getInt();
         achievementIdPortal8 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal8",
+                6074
         ).getInt();
         achievementIdPortal9 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal9",
+                6075
         ).getInt();
         achievementIdPortal10 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal10",
+                6076
         ).getInt();
         achievementIdPortal11 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal11",
+                6077
         ).getInt();
         achievementIdPortal12 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal12",
+                6078
         ).getInt();
         achievementIdPortal13 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal13",
+                6079
         ).getInt();
         achievementIdPortal14 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal14",
+                6080
         ).getInt();
         achievementIdPortal15 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal15",
+                6081
         ).getInt();
         achievementIdPortal16 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdPortal16",
+                6082
         ).getInt();
         achievementIdMineSand = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineSand",
+                6083
         ).getInt();
         achievementIdMakeSandstone = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeSandstone",
+                6084
         ).getInt();
         achievementIdSmeltGlass = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdSmeltGlass",
+                6085
         ).getInt();
         achievementIdMakeGlassPane = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeGlassPane",
+                6086
         ).getInt();
         achievementIdMineSnow = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineSnow",
+                6087
         ).getInt();
         achievementIdMakeSnow = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeSnow",
+                6088
         ).getInt();
         achievementIdMineGlowstoneDust = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineGlowstoneDust",
+                6089
         ).getInt();
         achievementIdMakeGlowstone = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeGlowstone",
+                6090
         ).getInt();
         achievementIdMineMushroomRed = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineMushroomRed",
+                6091
         ).getInt();
         achievementIdMineMushroomBrown = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineMushroomBrown",
+                6092
         ).getInt();
         achievementIdMakeMushroomStew = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMakeMushroomStew",
+                6093
         ).getInt();
         achievementIdEatMushroomStew = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdEatMushroomStew",
+                6094
         ).getInt();
         achievementIdMineClay = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdMineClay",
+                6095
         ).getInt();
         achievementIdAchieve1 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdAchieve1",
+                6096
         ).getInt();
         achievementIdAchieve2 = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdAchieve2",
+                6097
         ).getInt();
         achievementIdKilledByAny = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByAny",
+                6098
         ).getInt();
         achievementIdKilledByCreeper = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByCreeper",
+                6099
         ).getInt();
         achievementIdKilledByEnderman = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByEnderman",
+                6100
         ).getInt();
         achievementIdKilledByAnvil = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByAnvil",
+                6101
         ).getInt();
         achievementIdKilledByWall = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByWall",
+                6102
         ).getInt();
         achievementIdKilledByFlame = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByFlame",
+                6103
         ).getInt();
         achievementIdKilledByFire = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByFire",
+                6104
         ).getInt();
         achievementIdKilledByBlaze = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByBlaze",
+                6105
         ).getInt();
         achievementIdKilledByGhast = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByGhast",
+                6106
         ).getInt();
         achievementIdKilledByFall = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByFall",
+                6107
         ).getInt();
         achievementIdKilledByFireDispenser = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByFireDispenser",
+                6108
         ).getInt();
         achievementIdKilledByArrowDispenser = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByArrowDispenser",
+                6109
         ).getInt();
         achievementIdKilledByWater = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByWater",
+                6110
         ).getInt();
         achievementIdKilledByIron = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByIron",
+                6111
         ).getInt();
         achievementIdKilledBySpace = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledBySpace",
+                6112
         ).getInt();
         achievementIdKilledByZombie = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByZombie",
+                6113
         ).getInt();
         achievementIdKilledByZombieVillager = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByZombieVillager",
+                6114
         ).getInt();
         achievementIdKilledByZombieVillagerChild = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByZombieVillagerChild",
+                6115
         ).getInt();
         achievementIdKilledByZombieSword = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByZombieSword",
+                6116
         ).getInt();
         achievementIdKilledByZombieDiamond = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByZombieDiamond",
+                6117
         ).getInt();
         achievementIdKilledBySkeleton = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledBySkeleton",
+                6118
         ).getInt();
         achievementIdKilledBySpider = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledBySpider",
+                6119
         ).getInt();
         achievementIdKilledByDragon = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByDragon",
+                6120
         ).getInt();
         achievementIdKilledByWither = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByWither",
+                6121
         ).getInt();
         achievementIdKilledByThrownPotion = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByThrownPotion",
+                6122
         ).getInt();
         achievementIdKilledByPotion = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByPotion",
+                6123
         ).getInt();
         achievementIdKilledBySmallSlime = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledBySmallSlime",
+                6124
         ).getInt();
         achievementIdKilledByMediumSlime = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByMediumSlime",
+                6125
         ).getInt();
         achievementIdKilledByLargeSlime = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByLargeSlime",
+                6126
         ).getInt();
         achievementIdKilledByHugeSlime = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledByHugeSlime",
+                6127
         ).getInt();
         achievementIdKilledBySelf = configuration.get(
                 MoarConfiguration.CATEGORY_ACHIEVEMENT_ID,
-                "",
-                6000
+                "achievementIdKilledBySelf",
+                6128
         ).getInt();
 
 
@@ -859,7 +855,7 @@ public final class MoarConfiguration {
         return achievementIdMakeDispenser;
     }
 
-    public int getAchievementIdMakeNoteBlock(){
+    public int getAchievementIdMakeNoteBlock() {
         return achievementIdMakeNoteBlock;
     }
 
@@ -904,7 +900,7 @@ public final class MoarConfiguration {
     }
 
     public int getAchievementIdMakeChest() {
-        return achievementIDMakeChest;
+        return achievementIdMakeChest;
     }
 
     public int getAchievementIdMineCoal() {

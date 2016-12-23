@@ -42,130 +42,87 @@ public final class EventHookContainer {
     @ForgeSubscribe
     public void itemPickup(EntityItemPickupEvent event) {
         if (event.item.getEntityItem().itemID == Block.sand.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorageTiered.ACHIEVEMENT_MINE_SAND,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorageTiered.ACHIEVEMENT_MINE_SAND
             );
         } else if (event.item.getEntityItem().itemID == Item.snowball.itemID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorageTiered.ACHIEVEMENT_MINE_SNOW,
-                    1
+            event.entityPlayer.triggerAchievement(AchievementStorageTiered.ACHIEVEMENT_MINE_SNOW
             );
         } else if (event.item.getEntityItem().itemID == Item.coal.itemID && event.item.getEntityItem().getItemDamage() == 0) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_COAL,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_COAL
             );
         } else if (event.item.getEntityItem().itemID == Item.glowstone.itemID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorageTiered.ACHIEVEMENT_MINE_GLOWSTONE_DUST,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorageTiered.ACHIEVEMENT_MINE_GLOWSTONE_DUST
             );
         } else if (event.item.getEntityItem().itemID == Item.redstone.itemID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_REDSTONE,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
             );
         } else if (event.item.getEntityItem().itemID == Block.cloth.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_COLLECT_WOOL,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_COLLECT_WOOL
             );
         } else if (event.item.getEntityItem().itemID == Item.egg.itemID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_COLLECT_EGG,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_COLLECT_EGG
             );
         } else if (event.item.getEntityItem().itemID == Block.cactus.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_CACTUS,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_CACTUS
             );
         } else if (event.item.getEntityItem().itemID == Item.appleRed.itemID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_COLLECT_RED_APPLE,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_COLLECT_RED_APPLE
             );
         } else if (event.item.getEntityItem().itemID == Block.slowSand.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_SOUL_SAND,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_SOUL_SAND
             );
         } else if (event.item.getEntityItem().itemID == Block.netherrack.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_NETHERRACK,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_NETHERRACK
             );
         } else if (event.item.getEntityItem().itemID == Item.reed.itemID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_SUGAR_CANE,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_SUGAR_CANE
             );
         } else if (event.item.getEntityItem().itemID == Item.netherStalkSeeds.itemID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_NETHER_WART,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_NETHER_WART
             );
         } else if (event.item.getEntityItem().itemID == Block.dragonEgg.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_DRAGON_EGG,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_DRAGON_EGG
             );
         } else if (event.item.getEntityItem().itemID == Block.dirt.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_DIRT,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_DIRT
             );
         } else if (event.item.getEntityItem().itemID == Block.mushroomBrown.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorageTiered.ACHIEVEMENT_MINE_MUSHROOM_BROWN,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorageTiered.ACHIEVEMENT_MINE_MUSHROOM_BROWN
             );
         } else if (event.item.getEntityItem().itemID == Block.mushroomRed.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorageTiered.ACHIEVEMENT_MINE_MUSHROOM_RED,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorageTiered.ACHIEVEMENT_MINE_MUSHROOM_RED
             );
         } else if (event.item.getEntityItem().itemID == Block.blockSnow.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorageTiered.ACHIEVEMENT_MINE_SNOW,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorageTiered.ACHIEVEMENT_MINE_SNOW
             );
         } else if (event.item.getEntityItem().itemID == Block.cobblestone.blockID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_COBBLESTONE,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_COBBLESTONE
             );
         } else if (event.item.getEntityItem().itemID == Item.clay.itemID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorageTiered.ACHIEVEMENT_MINE_CLAY,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorageTiered.ACHIEVEMENT_MINE_CLAY
             );
         } else if (event.item.getEntityItem().itemID == Item.wheat.itemID) {
-            MoarAchievements.addStat(
-                    event.entityPlayer,
-                    AchievementStorage.ACHIEVEMENT_MINE_WHEAT,
-                    1
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorage.ACHIEVEMENT_MINE_WHEAT
             );
         }
 
@@ -175,57 +132,38 @@ public final class EventHookContainer {
     public void entityDeath(LivingDeathEvent event) {
         if (event.source.getSourceOfDamage() instanceof EntityPlayer) {
             if (event.entity instanceof EntityZombie) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.source.getSourceOfDamage(),
-                        AchievementStorage.ACHIEVEMENT_KILL_ZOMBIE,
-                        1
+                ((EntityPlayer)event.source.getSourceOfDamage()).triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_KILL_ZOMBIE
                 );
             }
             if (event.entity instanceof EntitySkeleton) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.source.getSourceOfDamage(),
-                        AchievementStorage.ACHIEVEMENT_KILL_SKELETON,
-                        1
+                ((EntityPlayer)event.source.getSourceOfDamage()).triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_KILL_SKELETON
                 );
             }
             if (event.entity instanceof EntityCow || event.entity instanceof EntityPig || event.entity instanceof EntityChicken) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.source.getSourceOfDamage(),
-//                        Achievements.killPassiveMobForMeat,
-                        AchievementStorage.ACHIEVEMENT_KILL_PASSIVE_MOB_FOR_MEAT,
-                        1
+                ((EntityPlayer)event.source.getSourceOfDamage()).triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_KILL_PASSIVE_MOB_FOR_MEAT
                 );
             }
             if (event.entity instanceof EntityEnderman) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.source.getSourceOfDamage(),
-//                        Achievements.killEnderman,
-                        AchievementStorage.ACHIEVEMENT_KILL_ENDERMAN,
-                        1
+                ((EntityPlayer)event.source.getSourceOfDamage()).triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_KILL_ENDERMAN
                 );
             }
             if (event.entity instanceof EntityCreeper) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.source.getSourceOfDamage(),
-//                        Achievements.killCreeper,
-                        AchievementStorage.ACHIEVEMENT_KILL_CREEPER,
-                        1
+                ((EntityPlayer)event.source.getSourceOfDamage()).triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_KILL_CREEPER
                 );
             }
             if (event.entity instanceof EntitySpider) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.source.getSourceOfDamage(),
-//                        Achievements.killSpider,
-                        AchievementStorage.ACHIEVEMENT_KILL_SPIDER,
-                        1
+                ((EntityPlayer)event.source.getSourceOfDamage()).triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_KILL_SPIDER
                 );
             }
             if (event.entity instanceof EntitySlime) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.source.getSourceOfDamage(),
-//                        Achievements.killSlime,
-                        AchievementStorage.ACHIEVEMENT_KILL_SLIME,
-                        1
+                ((EntityPlayer)event.source.getSourceOfDamage()).triggerAchievement(
+                        AchievementStorage.ACHIEVEMENT_KILL_SLIME
                 );
             }
         }
@@ -237,27 +175,19 @@ public final class EventHookContainer {
                 if (entityArrow.shootingEntity instanceof EntitySkeleton) {
                     EntityLivingBase living = (EntityLivingBase)((EntityCreature)entityArrow.shootingEntity).getEntityToAttack();
                     if (event.entity instanceof EntityCreeper && living instanceof EntityPlayer) {
-                        MoarAchievements.addStat(
-                                (EntityPlayer)living,
-//                                Achievements.getSkeletonToKillCreeper,
-                                AchievementStorage.ACHIEVEMENT_GET_SKELETON_TO_KILL_CREEPER,
-                                1
+                        ((EntityPlayer)living).triggerAchievement(
+                                AchievementStorage.ACHIEVEMENT_GET_SKELETON_TO_KILL_CREEPER
                         );
                     }
                     if (event.entity instanceof EntityPlayer) {
-                        MoarAchievements.addStat(
-                                (EntityPlayer)event.entity,
-//                                Achievements.killedBySkeleton,
-                                AchievementStorage.ACHIEVEMENT_KILL_SKELETON,
-                                1
+                        ((EntityPlayer)living).triggerAchievement(
+                                AchievementStorage.ACHIEVEMENT_KILL_SKELETON
                         );
                     }
                 }
                 if (entityArrow.shootingEntity instanceof EntityPlayer && entityArrow.shootingEntity == MoarAchievements.entityPlayer && event.entity instanceof EntityPlayer) {
-                    MoarAchievements.addStat(
-                            (EntityPlayer)event.entity,
-                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_SELF,
-                            1
+                    ((EntityPlayer)event.entity).triggerAchievement(
+                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_SELF
                     );
                 }
             }
@@ -265,177 +195,131 @@ public final class EventHookContainer {
         if (event.source.getSourceOfDamage() instanceof EntityFireball) {
             EntityFireball slime1 = (EntityFireball)event.source.getSourceOfDamage();
             if (slime1.shootingEntity instanceof EntityBlaze && event.entity instanceof EntityPlayer) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.entity,
-                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_BLAZE,
-                        1
+                ((EntityPlayer)event.entity).triggerAchievement(
+                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_BLAZE
                 );
             }
             if (slime1.shootingEntity instanceof EntityGhast && event.entity instanceof EntityPlayer) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.entity,
-                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_GHAST,
-                        1
+                ((EntityPlayer)event.entity).triggerAchievement(
+                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_GHAST
                 );
             }
             if (slime1.shootingEntity == null && event.entity instanceof EntityPlayer) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.entity,
-                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_FIRE_DISPENSER,
-                        1
+                ((EntityPlayer)event.entity).triggerAchievement(
+                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_FIRE_DISPENSER
                 );
                 passFireCheck = true;
             }
         }
         if (event.source.getSourceOfDamage() instanceof EntityWither && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_WITHER,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_WITHER
             );
         }
         if (event.source.getDamageType().equals("wither") && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_WITHER,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_WITHER
             );
         }
         if (event.source.getDamageType().equals("explosion") && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_CREEPER,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_CREEPER
             );
         }
         if (event.source.getDamageType().equals("anvil") && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANVIL,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANVIL
             );
         }
         if (event.source.getDamageType().equals("inWall") && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_WALL,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_WALL
             );
         }
         if (event.source.getDamageType().equals("inFire") && !passFireCheck && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_FLAME,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_FLAME
             );
         }
         if (event.source.getDamageType().equals("onFire") && !passFireCheck && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_FIRE,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_FIRE
             );
         }
         if (event.source.getDamageType().equals("fall") && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_FALL,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_FALL
             );
         }
         if (event.source.getDamageType().equals("drown") && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_WATER,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_WATER
             );
         }
         if (event.source.getDamageType().equals("outOfWorld") && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_SPACE,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_SPACE
             );
         }
         if (event.source.getDamageType().equals("indirectMagic") && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_THROWN_POTION,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_THROWN_POTION
             );
         }
         if (event.source.getDamageType().equals("magic") && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_POTION,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_POTION
             );
         }
         if (event.source.getSourceOfDamage() instanceof EntityEnderman && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ENDERMAN,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ENDERMAN
             );
         }
         if (event.source.getSourceOfDamage() instanceof EntityZombie && event.entity instanceof EntityPlayer) {
             if (((EntityZombie)event.source.getSourceOfDamage()).isVillager()) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.entity,
-                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE_VILLAGER,
-                        1
+                ((EntityPlayer)event.entity).triggerAchievement(
+                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE_VILLAGER
                 );
             }
 
             if (((EntityLivingBase)event.source.getSourceOfDamage()).isChild()) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.entity,
-                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE_VILLAGER_CHILD,
-                        1
+                ((EntityPlayer)event.entity).triggerAchievement(
+                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE_VILLAGER_CHILD
                 );
             }
 
             ItemStack slime2 = ((EntityLivingBase)event.source.getSourceOfDamage()).getHeldItem();
             if (slime2 != null) {
                 if (slime2.itemID == Item.diamond.itemID) {
-                    MoarAchievements.addStat(
-                            (EntityPlayer)event.entity,
-                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE_DIAMOND,
-                            1
+                    ((EntityPlayer)event.entity).triggerAchievement(
+                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE_DIAMOND
                     );
                 }
 
                 if (slime2.itemID == Item.swordWood.itemID || slime2.itemID == Item.swordStone.itemID || slime2.itemID == Item.swordGold.itemID || slime2.itemID == Item.swordIron.itemID || slime2.itemID == Item.swordDiamond.itemID) {
-                    MoarAchievements.addStat(
-                            (EntityPlayer)event.entity,
-                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE_SWORD,
-                            1
+                    ((EntityPlayer)event.entity).triggerAchievement(
+                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE_SWORD
                     );
                 }
             }
 
             if (!((EntityZombie)event.source.getSourceOfDamage()).isVillager() && !((EntityLivingBase)event.source.getSourceOfDamage()).isChild() && slime2 == null) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.entity,
-                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE,
-                        1
+                ((EntityPlayer)event.entity).triggerAchievement(
+                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE
                 );
             }
         }
 
         if (event.source.getSourceOfDamage() instanceof EntitySpider && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_SPIDER,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_SPIDER
             );
         }
 
         if (event.source.getSourceOfDamage() instanceof EntityPlayer && event.entity instanceof EntityPlayer && event.entityLiving.getEntityName().equals(MoarAchievements.entityPlayer.getEntityName())) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_SELF,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_SELF
             );
         }
 
@@ -444,44 +328,34 @@ public final class EventHookContainer {
             if (event.entity instanceof EntityPlayer) {
                 System.out.println(slime3.getSlimeSize());
                 if (slime3.getSlimeSize() == 1) {
-                    MoarAchievements.addStat(
-                            (EntityPlayer)event.entity,
-                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_SMALL_SLIME,
-                            1
+                    ((EntityPlayer)event.entity).triggerAchievement(
+                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_SMALL_SLIME
                     );
                 }
 
                 if (slime3.getSlimeSize() == 2) {
-                    MoarAchievements.addStat(
-                            (EntityPlayer)event.entity,
-                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_MEDIUM_SLIME,
-                            1
+                    ((EntityPlayer)event.entity).triggerAchievement(
+                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_MEDIUM_SLIME
                     );
                 }
 
                 if (slime3.getSlimeSize() == 4) {
-                    MoarAchievements.addStat(
-                            (EntityPlayer)event.entity,
-                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_LARGE_SLIME,
-                            1
+                    ((EntityPlayer)event.entity).triggerAchievement(
+                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_LARGE_SLIME
                     );
                 }
 
                 if (slime3.getSlimeSize() >= 5) {
-                    MoarAchievements.addStat(
-                            (EntityPlayer)event.entity,
-                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_HUGE_SLIME,
-                            1
+                    ((EntityPlayer)event.entity).triggerAchievement(
+                            AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_HUGE_SLIME
                     );
                 }
             }
         }
 
         if (event.source.getSourceOfDamage() instanceof EntityDragon && event.entity instanceof EntityPlayer) {
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_DRAGON,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_DRAGON
             );
         }
 
@@ -495,25 +369,19 @@ public final class EventHookContainer {
             }
 
             ClientProxyMA.tickHandler.setPlayerDiedRecently();
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
             );
             int posX = (int)event.entity.posX;
             int posY = (int)event.entity.posY;
             int posZ = (int)event.entity.posZ;
             if (MoarAchievements.mc.theWorld.getBlockId(posX, posY - 1, posZ) == Block.blockIron.blockID) {
-                MoarAchievements.addStat(
-                        (EntityPlayer)event.entity,
-                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_IRON,
-                        1
+                ((EntityPlayer)event.entity).triggerAchievement(
+                        AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_IRON
                 );
             }
-            MoarAchievements.addStat(
-                    (EntityPlayer)event.entity,
-                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY,
-                    1
+            ((EntityPlayer)event.entity).triggerAchievement(
+                    AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
             );
         }
     }
@@ -559,6 +427,7 @@ public final class EventHookContainer {
                     break;
             }
             ClientProxyMA.tickHandler.setPassback(
+                    MoarAchievements.mc.theWorld,
                     posX,
                     posY,
                     posZ
@@ -576,17 +445,13 @@ public final class EventHookContainer {
                 }
             } else {
                 if (usedItem != null && usedItem.itemID == Item.porkCooked.itemID) {
-                    MoarAchievements.addStat(
-                            MoarAchievements.entityPlayer,
-                            AchievementStorage.ACHIEVEMENT_EAT_BACON,
-                            1
+                    MoarAchievements.entityPlayer.triggerAchievement(
+                            AchievementStorage.ACHIEVEMENT_EAT_BACON
                     );
                 }
                 if (usedItem != null && usedItem.itemID == Item.bowlSoup.itemID) {
-                    MoarAchievements.addStat(
-                            MoarAchievements.entityPlayer,
-                            AchievementStorageTiered.ACHIEVEMENT_EAT_MUSHROOM_STEW,
-                            1
+                    MoarAchievements.entityPlayer.triggerAchievement(
+                            AchievementStorageTiered.ACHIEVEMENT_EAT_MUSHROOM_STEW
                     );
                 }
             }

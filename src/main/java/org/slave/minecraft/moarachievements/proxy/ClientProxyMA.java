@@ -11,7 +11,7 @@ public final class ClientProxyMA extends CommonProxyMA {
     @Override
     public void registerTickers() {
         TickRegistry.registerTickHandler(
-                tickHandler,
+                ClientProxyMA.tickHandler,
                 Side.CLIENT
         );
     }
