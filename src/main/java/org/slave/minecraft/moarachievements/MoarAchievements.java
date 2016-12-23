@@ -18,10 +18,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraft.stats.StatBase;
 import net.minecraft.world.World;
-import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.MinecraftForge;
-import org.slave.lib.helpers.ReflectionHelper;
-import org.slave.minecraft.moarachievements.achievements.pages.AchievementPages;
+import org.slave.minecraft.moarachievements.achievements.pages.AchievementPage;
 import org.slave.minecraft.moarachievements.common.CraftingHandler;
 import org.slave.minecraft.moarachievements.common.EventHookContainer;
 import org.slave.minecraft.moarachievements.common.MoarConfiguration;
@@ -30,7 +28,6 @@ import org.slave.minecraft.moarachievements.proxy.CommonProxyMA;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,34 +88,12 @@ public final class MoarAchievements {
         MoarAchievements.moarConfiguration = new MoarConfiguration();
         MoarAchievements.moarConfiguration.loadConfig(true);
 
-        for(AchievementPages achievementPageStorage : AchievementPages.values()) {
-            Class achievementStorageClass = achievementPageStorage.getAchievementStorageClass();
-            Enum[] enumValues = ReflectionHelper.getEnumValues(achievementStorageClass);
-
-            for(Enum enumValue : enumValues) {
-                try {
-                    ReflectionHelper.invokeMethod(
-                            ReflectionHelper.getMethod(
-                                    achievementStorageClass,
-                                    "registerAchievement",
-                                    new Class<?>[0]
-                            ),
-                            enumValue,
-                            new Object[0]
-                    );
-                } catch(IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-                    MoarAchievements.LOGGER_MOAR_ACHIEVEMENTS.warn(
-                            "Error occurred while registering achievements!",
-                            e
-                    );
-                }
-            }
+        for(AchievementPage achievementPage : AchievementPage.values()) {
+            for(Achievement achievement : achievementPage.getAchievementPage().getAchievements()) achievement.registerAchievement();
         }
 
         MoarAchievements.achievementGetterItem = new ItemAchievementGetter(
                 MoarAchievements.moarConfiguration.getAchievementGetterItemId()
-        ).setUnlocalizedName(
-                "achievementGetter"
         );
 
         GameRegistry.registerItem(
@@ -139,16 +114,16 @@ public final class MoarAchievements {
                 new CraftingHandler()
         );
         MoarAchievements.commonProxyMA.registerTickers();
-        AchievementPage.registerAchievementPage(
-                AchievementPages.PAGE_DEATH.getAchievementPage()
+        net.minecraftforge.common.AchievementPage.registerAchievementPage(
+                AchievementPage.PAGE_DEATH.getAchievementPage()
         );
-        AchievementPage.registerAchievementPage(
-                AchievementPages.PAGE_TIERED.getAchievementPage()
+        net.minecraftforge.common.AchievementPage.registerAchievementPage(
+                AchievementPage.PAGE_TIERED.getAchievementPage()
         );
 
         GameRegistry.addRecipe(
                 new ItemStack(
-                        achievementGetterItem,
+                        MoarAchievements.achievementGetterItem,
                         1
                 ),
 
@@ -162,11 +137,6 @@ public final class MoarAchievements {
                 '@',
                 Block.blockGold
         );
-    }
-
-    @Deprecated
-    public static int getNextAchievementID() {
-        return -1;
     }
 
 }

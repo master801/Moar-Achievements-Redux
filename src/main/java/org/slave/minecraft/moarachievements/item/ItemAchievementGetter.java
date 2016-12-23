@@ -13,6 +13,7 @@ public final class ItemAchievementGetter extends Item {
         setMaxStackSize(1);
         setCreativeTab(CreativeTabs.tabMisc);
         setFull3D();
+        setUnlocalizedName("achievementGetter");
     }
 
     @Override

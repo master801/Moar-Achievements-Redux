@@ -11,7 +11,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.stats.StatBase;
 import net.minecraft.world.World;
 import org.slave.minecraft.moarachievements.MoarAchievements;
-import org.slave.minecraft.moarachievements.achievements.AchievementStorage.AchievementStorageMain;
+import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorage;
 
 import java.util.EnumSet;
 
@@ -70,7 +70,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
             if (MoarAchievements.entityPlayer.experienceLevel >= 1) {
                 MoarAchievements.addStat(
                         MoarAchievements.entityPlayer,
-                        AchievementStorageMain.ACHIEVEMENT_LEVEL_1.getAchievement(),
+                        AchievementStorage.ACHIEVEMENT_LEVEL_1,
                         1
                 );
             }
@@ -78,7 +78,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
             if (MoarAchievements.entityPlayer.experienceLevel >= 2) {
                 MoarAchievements.addStat(
                         MoarAchievements.entityPlayer,
-                        AchievementStorageMain.ACHIEVEMENT_LEVEL_2.getAchievement(),
+                        AchievementStorage.ACHIEVEMENT_LEVEL_2,
                         1
                 );
             }
@@ -86,7 +86,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
             if (MoarAchievements.entityPlayer.experienceLevel >= 3) {
                 MoarAchievements.addStat(
                         MoarAchievements.entityPlayer,
-                        AchievementStorageMain.ACHIEVEMENT_LEVEL_3.getAchievement(),
+                        AchievementStorage.ACHIEVEMENT_LEVEL_3,
                         1
                 );
             }
@@ -94,7 +94,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
             if (MoarAchievements.entityPlayer.experienceLevel >= 4) {
                 MoarAchievements.addStat(
                         MoarAchievements.entityPlayer,
-                        AchievementStorageMain.ACHIEVEMENT_LEVEL_4.getAchievement(),
+                        AchievementStorage.ACHIEVEMENT_LEVEL_4,
                         1
                 );
             }
@@ -102,7 +102,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
             if (MoarAchievements.entityPlayer.experienceLevel >= 5) {
                 MoarAchievements.addStat(
                         MoarAchievements.entityPlayer,
-                        AchievementStorageMain.ACHIEVEMENT_LEVEL_5.getAchievement(),
+                        AchievementStorage.ACHIEVEMENT_LEVEL_5,
                         1
                 );
             }
@@ -110,7 +110,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
             if (MoarAchievements.entityPlayer.experienceLevel >= 10) {
                 MoarAchievements.addStat(
                         MoarAchievements.entityPlayer,
-                        AchievementStorageMain.ACHIEVEMENT_LEVEL_10.getAchievement(),
+                        AchievementStorage.ACHIEVEMENT_LEVEL_10,
                         1
                 );
             }
@@ -124,7 +124,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
         if (MoarAchievements.entityPlayer != null && world != null && player.posY <= 55.0D && world.getBlockLightValue((int)player.posX, (int)player.posY, (int)player.posZ) <= 5) {
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_ENTER_CAVE.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_ENTER_CAVE,
                     1
             );
         }
@@ -137,7 +137,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
             } else {
                 ticking = false;
                 if (MoarAchievements.entityPlayer != null) {
-                    if (chieve.statId == AchievementStorageMain.ACHIEVEMENT_LIVE_FALLING.getAchievement().statId) {
+                    if (chieve.statId == AchievementStorage.ACHIEVEMENT_LIVE_FALLING.statId) {
                         if (playerDiedRecently) return;
                         MoarAchievements.addStat(
                                 MoarAchievements.entityPlayer,
@@ -188,7 +188,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
         if (obsidianChieve >= 1) {
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_OBSIDIAN_1.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_1,
                     1
             );
         }
@@ -196,7 +196,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
         if (obsidianChieve >= 2) {
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_OBSIDIAN_2.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_2,
                     1
             );
         }
@@ -204,17 +204,17 @@ public final class ClientTickHandlerMA implements ITickHandler {
         if (obsidianChieve >= 3) {
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_OBSIDIAN_3.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_3,
                     1
             );
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_OBSIDIAN_4.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_4,
                     1
             );
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_OBSIDIAN_5.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_5,
                     1
             );
         }
@@ -222,17 +222,17 @@ public final class ClientTickHandlerMA implements ITickHandler {
         if (obsidianChieve >= 4) {
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_OBSIDIAN_6.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_6,
                     1
             );
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_OBSIDIAN_7.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_7,
                     1
             );
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_OBSIDIAN_8.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_8,
                     1
             );
         }
@@ -240,12 +240,12 @@ public final class ClientTickHandlerMA implements ITickHandler {
         if (obsidianChieve >= 5) {
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_OBSIDIAN_9.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_9,
                     1
             );
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_OBSIDIAN_10.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_10,
                     1
             );
         }
@@ -253,32 +253,32 @@ public final class ClientTickHandlerMA implements ITickHandler {
         if (obsidianChieve >= 6) {
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_PORTAL_11.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_PORTAL_11,
                     1
             );
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_PORTAL_12.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_PORTAL_12,
                     1
             );
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_PORTAL_13.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_PORTAL_13,
                     1
             );
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_PORTAL_14.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_PORTAL_14,
                     1
             );
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_PORTAL_15.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_PORTAL_15,
                     1
             );
             MoarAchievements.addStat(
                     MoarAchievements.entityPlayer,
-                    AchievementStorageMain.ACHIEVEMENT_PORTAL_16.getAchievement(),
+                    AchievementStorage.ACHIEVEMENT_PORTAL_16,
                     1
             );
         }
