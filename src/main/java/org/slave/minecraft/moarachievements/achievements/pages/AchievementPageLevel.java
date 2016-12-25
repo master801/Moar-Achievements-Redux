@@ -6,7 +6,7 @@ public final class AchievementPageLevel extends AchievementPage {
 
     public AchievementPageLevel() {
         super(
-                "Level"
+                "achievement_page.moarachievementsredux.level"
         );
     }
 

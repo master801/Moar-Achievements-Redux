@@ -7,7 +7,7 @@ public final class AchievementPageDeath extends AchievementPage {
 
     public AchievementPageDeath() {
         super(
-                "Death",
+                "achievement_page.moarachievementsredux.death",
 
                 AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY,
                 AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_CREEPER,

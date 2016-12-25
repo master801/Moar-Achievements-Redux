@@ -7,7 +7,7 @@ public final class AchievementPageTiered extends AchievementPage {
 
     public AchievementPageTiered() {
         super(
-                "Tiers",
+                "achievement_page.moarachievementsredux.tiers",
 
                 AchievementStorageTiered.ACHIEVEMENT_MINE_SAND,
                 AchievementStorageTiered.ACHIEVEMENT_MAKE_SANDSTONE,

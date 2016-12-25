@@ -6,7 +6,7 @@ public final class AchievementPageNether extends AchievementPage {
 
     public AchievementPageNether() {
         super(
-                "Nether"
+                "achievement_page.moarachievementsredux.nether"
         );
     }
 

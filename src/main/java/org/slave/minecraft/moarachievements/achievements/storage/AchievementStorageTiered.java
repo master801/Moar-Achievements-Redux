@@ -14,7 +14,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MINE_SAND = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineSand(),
-            "mineSand",
+            "moararchievementsredux.tiered.mineSand",
             -7,
             -7,
             Block.sand,
@@ -23,7 +23,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MAKE_SANDSTONE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeSandstone(),
-            "buildSandstone",
+            "moararchievementsredux.tiered.buildSandstone",
             -8,
             -5,
             Block.sandStone,
@@ -32,7 +32,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_SMELT_GLASS = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdSmeltGlass(),
-            "smeltGlass",
+            "moararchievementsredux.tiered.smeltGlass",
             -6,
             -5,
             Block.glass,
@@ -41,7 +41,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MAKE_GLASS_PANE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeGlassPane(),
-            "buildGlassPane",
+            "moararchievementsredux.tiered.buildGlassPane",
             -6,
             -3,
             Block.thinGlass,
@@ -50,7 +50,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MINE_SNOW = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineSnow(),
-            "mineSnow",
+            "moararchievementsredux.tiered.mineSnow",
             -5,
             -7,
             Item.snowball,
@@ -59,7 +59,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MAKE_SNOW = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeSnow(),
-            "buildSnow",
+            "moararchievementsredux.tiered.buildSnow",
             -5,
             -5,
             Block.blockSnow,
@@ -68,7 +68,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MINE_GLOWSTONE_DUST = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineGlowstoneDust(),
-            "mineGlowStoneDust",
+            "moararchievementsredux.tiered.mineGlowStoneDust",
             -3,
             -7,
             Item.glowstone,
@@ -77,7 +77,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MAKE_GLOWSTONE = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeGlowstone(),
-            "buildGlowStone",
+            "moararchievementsredux.tiered.buildGlowStone",
             -3,
             -5,
             Block.glowStone,
@@ -86,7 +86,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MINE_MUSHROOM_RED = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineMushroomRed(),
-            "mineMushroomRed",
+            "moararchievementsredux.tiered.mineMushroomRed",
             0,
             -7,
             Block.mushroomRed,
@@ -95,7 +95,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MINE_MUSHROOM_BROWN = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineMushroomBrown(),
-            "mineMushroomBrown",
+            "moararchievementsredux.tiered.mineMushroomBrown",
             -2,
             -7,
             Block.mushroomBrown,
@@ -104,7 +104,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MAKE_MUSHROOM_STEW = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMakeMushroomStew(),
-            "makeMushroomStew",
+            "moararchievementsredux.tiered.makeMushroomStew",
             -1,
             -5,
             Item.bowlSoup,
@@ -113,7 +113,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_EAT_MUSHROOM_STEW = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdEatMushroomStew(),
-            "eatMushroomStew",
+            "moararchievementsredux.tiered.eatMushroomStew",
             -1,
             -3,
             Item.bowlEmpty,
@@ -122,7 +122,7 @@ public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MINE_CLAY = new Achievement(
             MoarAchievements.moarConfiguration.getAchievementIdMineClay(),
-            "mineClay",
+            "moararchievementsredux.tiered.mineClay",
             1,
             -7,
             Item.clay,
