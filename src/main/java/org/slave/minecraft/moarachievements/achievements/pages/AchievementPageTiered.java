@@ -1,5 +1,6 @@
 package org.slave.minecraft.moarachievements.achievements.pages;
 
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.AchievementPage;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageTiered;
 
@@ -7,7 +8,7 @@ public final class AchievementPageTiered extends AchievementPage {
 
     public AchievementPageTiered() {
         super(
-                "achievement_page.moarachievementsredux.tiers",
+                StatCollector.translateToLocal("achievement_page.moarachievementsredux.tiers"),
 
                 AchievementStorageTiered.ACHIEVEMENT_MINE_SAND,
                 AchievementStorageTiered.ACHIEVEMENT_MAKE_SANDSTONE,

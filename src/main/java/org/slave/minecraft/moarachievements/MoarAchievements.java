@@ -14,10 +14,13 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
-import org.slave.minecraft.moarachievements.achievements.pages.AchievementPage;
+import org.slave.minecraft.moarachievements.achievements.pages.AchievementPageDeath;
+import org.slave.minecraft.moarachievements.achievements.pages.AchievementPageTiered;
+import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorage;
+import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageDeath;
+import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageTiered;
 import org.slave.minecraft.moarachievements.common.CraftingHandler;
 import org.slave.minecraft.moarachievements.common.EventHookContainer;
 import org.slave.minecraft.moarachievements.common.MoarConfiguration;
@@ -25,9 +28,6 @@ import org.slave.minecraft.moarachievements.item.ItemAchievementGetter;
 import org.slave.minecraft.moarachievements.proxy.CommonProxyMA;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Mod(modid = MoarAchievements.MOD_ID, name = MoarAchievements.NAME, version = "@VERSION@")
 @NetworkMod(clientSideRequired = true)
@@ -51,8 +51,6 @@ public final class MoarAchievements {
 
     public static Item achievementGetterItem = null;
 
-    public static List<Achievement> achievementList = new ArrayList<>();
-
     public static MoarConfiguration moarConfiguration;
 
     public static EntityPlayer entityPlayer;
@@ -65,31 +63,26 @@ public final class MoarAchievements {
         MoarAchievements.moarConfiguration.loadConfig(true);
 
         MoarAchievements.achievementGetterItem = new ItemAchievementGetter(
-                MoarAchievements.moarConfiguration.getAchievementGetterItemId()
+                MoarAchievements.moarConfiguration.getItemIdAchievementGetter()
         );
 
         GameRegistry.registerItem(
                 MoarAchievements.achievementGetterItem,
                 MoarAchievements.MOD_ID + ':' + "achievementGetter"
         );
-
-//        English.initializeLang();
-//        Chinese.initializeLang();//TODO
     }
 
     @EventHandler
     public void load(final FMLInitializationEvent event) {
-        for(AchievementPage achievementPage : AchievementPage.values()) {
-            for(Achievement achievement : achievementPage.getAchievementPage().getAchievements()) {
-                achievement.registerAchievement();
-            }
-        }
+        AchievementStorage.registerAchievements();
+        AchievementStorageDeath.registerAchievements();
+        AchievementStorageTiered.registerAchievements();
 
         net.minecraftforge.common.AchievementPage.registerAchievementPage(
-                AchievementPage.PAGE_DEATH.getAchievementPage()
+                new AchievementPageDeath()
         );
         net.minecraftforge.common.AchievementPage.registerAchievementPage(
-                AchievementPage.PAGE_TIERED.getAchievementPage()
+                new AchievementPageTiered()
         );
 
         MinecraftForge.EVENT_BUS.register(

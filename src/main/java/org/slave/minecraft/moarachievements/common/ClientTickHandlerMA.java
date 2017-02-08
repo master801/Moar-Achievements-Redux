@@ -8,7 +8,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.stats.StatBase;
+import net.minecraft.stats.Achievement;
 import net.minecraft.world.World;
 import org.slave.minecraft.moarachievements.MoarAchievements;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorage;
@@ -19,7 +19,7 @@ public final class ClientTickHandlerMA implements ITickHandler {
 
     private EntityPlayer player;
     private EntityLivingBase entity;
-    private StatBase chieve;
+    private Achievement achievement;
     private int ticksLeft;
     private int recentDeathTicks;
     private int tempX1 = 0;
@@ -59,46 +59,52 @@ public final class ClientTickHandlerMA implements ITickHandler {
 
     private void onTickInGame() {
         checkPlayerInCave();
-        runAchievementTicker();
-        checkPlayerLevel();
+        runAchievementTicker(
+                MoarAchievements.entityPlayer
+        );
+        checkPlayerLevel(
+                MoarAchievements.entityPlayer
+        );
         checkPlayerDeath();
-        checkObsidian();
+        checkObsidian(
+                MoarAchievements.entityPlayer
+        );
     }
 
-    private void checkPlayerLevel() {
-        if (MoarAchievements.entityPlayer != null) {
-            if (MoarAchievements.entityPlayer.experienceLevel >= 1) {
-                MoarAchievements.entityPlayer.triggerAchievement(
+    private void checkPlayerLevel(final EntityPlayer entityPlayer) {
+        if (entityPlayer != null) {
+            if (entityPlayer.experienceLevel >= 1) {
+                entityPlayer.triggerAchievement(
                         AchievementStorage.ACHIEVEMENT_LEVEL_1
                 );
             }
 
-            if (MoarAchievements.entityPlayer.experienceLevel >= 2) {
-                MoarAchievements.entityPlayer.triggerAchievement(
+            if (entityPlayer.experienceLevel >= 2) {
+                entityPlayer.triggerAchievement(
                         AchievementStorage.ACHIEVEMENT_LEVEL_2
                 );
             }
 
-            if (MoarAchievements.entityPlayer.experienceLevel >= 3) {
-                MoarAchievements.entityPlayer.triggerAchievement(
+            if (entityPlayer.experienceLevel >= 3) {
+                entityPlayer.triggerAchievement(
                         AchievementStorage.ACHIEVEMENT_LEVEL_3
                 );
             }
 
-            if (MoarAchievements.entityPlayer.experienceLevel >= 4) {
-                MoarAchievements.entityPlayer.triggerAchievement(
+            if (entityPlayer.experienceLevel >= 4) {
+                entityPlayer.triggerAchievement(
                         AchievementStorage.ACHIEVEMENT_LEVEL_4
                 );
             }
 
-            if (MoarAchievements.entityPlayer.experienceLevel >= 5) {
-                MoarAchievements.entityPlayer.triggerAchievement(
+            if (entityPlayer.experienceLevel >= 5) {
+                entityPlayer.triggerAchievement(
                         AchievementStorage.ACHIEVEMENT_LEVEL_5
                 );
             }
 
-            if (MoarAchievements.entityPlayer.experienceLevel >= 10) {
-                MoarAchievements.entityPlayer.triggerAchievement(
+            if (entityPlayer.experienceLevel >= 10) {
+                entityPlayer.triggerAchievement(
                         AchievementStorage.ACHIEVEMENT_LEVEL_10
                 );
             }
@@ -109,28 +115,28 @@ public final class ClientTickHandlerMA implements ITickHandler {
     public void checkPlayerInCave() {
         player = FMLClientHandler.instance().getClient().thePlayer;
         world = FMLClientHandler.instance().getClient().theWorld;
-        if (MoarAchievements.entityPlayer != null && world != null && player.posY <= 55.0D && world.getBlockLightValue((int)player.posX, (int)player.posY, (int)player.posZ) <= 5) {
-            MoarAchievements.entityPlayer.triggerAchievement(
+        if (player != null && world != null && player.posY <= 55.0D && world.getBlockLightValue((int)player.posX, (int)player.posY, (int)player.posZ) <= 5) {
+            player.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_ENTER_CAVE
             );
         }
     }
 
-    public void runAchievementTicker() {
+    public void runAchievementTicker(final EntityPlayer entityPlayer) {
         if (ticking) {
             if (ticksLeft > 0) {
                 --ticksLeft;
             } else {
                 ticking = false;
-                if (MoarAchievements.entityPlayer != null) {
-                    if (chieve.statId == AchievementStorage.ACHIEVEMENT_LIVE_FALLING.statId) {
+                if (entityPlayer != null) {
+                    if (achievement.statId == AchievementStorage.ACHIEVEMENT_LIVE_FALLING.statId) {
                         if (playerDiedRecently) return;
-                        MoarAchievements.entityPlayer.triggerAchievement(
-                                chieve
+                        entityPlayer.triggerAchievement(
+                                achievement
                         );
                     }
-                    MoarAchievements.entityPlayer.addStat(
-                            chieve,
+                    entityPlayer.addStat(
+                            achievement,
                             1
                     );
                 } else if (!annoyed) {
@@ -147,18 +153,16 @@ public final class ClientTickHandlerMA implements ITickHandler {
 
     public void checkPlayerDeath() {
         if (playerDiedRecently && recentDeathTicks == 0) recentDeathTicks = 20;
-
         if (recentDeathTicks > 0) {
             --recentDeathTicks;
             if (recentDeathTicks == 0) playerDiedRecently = false;
         }
-
     }
 
-    public void registerAchievementToGet(EntityLivingBase entity, StatBase chieve, int ticks) {
+    public void registerAchievementToGet(final EntityLivingBase entity, final Achievement achievement, final int ticks) {
         if (!ticking) {
             this.entity = entity;
-            this.chieve = chieve;
+            this.achievement = achievement;
             ticksLeft = ticks;
             ticking = true;
         }
@@ -168,69 +172,69 @@ public final class ClientTickHandlerMA implements ITickHandler {
         playerDiedRecently = true;
     }
 
-    private void checkObsidian() {
+    private void checkObsidian(final EntityPlayer entityPlayer) {
         if (obsidianChieve >= 1) {
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_OBSIDIAN_1
             );
         }
 
         if (obsidianChieve >= 2) {
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_OBSIDIAN_2
             );
         }
 
         if (obsidianChieve >= 3) {
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_OBSIDIAN_3
             );
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_OBSIDIAN_4
             );
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_OBSIDIAN_5
             );
         }
 
         if (obsidianChieve >= 4) {
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_OBSIDIAN_6
             );
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_OBSIDIAN_7
             );
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_OBSIDIAN_8
             );
         }
 
         if (obsidianChieve >= 5) {
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_OBSIDIAN_9
             );
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_OBSIDIAN_10
             );
         }
 
         if (obsidianChieve >= 6) {
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_PORTAL_11
             );
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_PORTAL_12
             );
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_PORTAL_13
             );
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_PORTAL_14
             );
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_PORTAL_15
             );
-            MoarAchievements.entityPlayer.triggerAchievement(
+            entityPlayer.triggerAchievement(
                     AchievementStorage.ACHIEVEMENT_PORTAL_16
             );
         }
