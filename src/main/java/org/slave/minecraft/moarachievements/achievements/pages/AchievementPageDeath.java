@@ -1,13 +1,16 @@
 package org.slave.minecraft.moarachievements.achievements.pages;
 
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.AchievementPage;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageDeath;
 
 public final class AchievementPageDeath extends AchievementPage {
 
-    public AchievementPageDeath() {
+    public static final AchievementPage ACHIEVEMENT_PAGE_DEATH = new AchievementPageDeath();
+
+    private AchievementPageDeath() {
         super(
-                "achievement_page.moarachievementsredux.death",
+                StatCollector.translateToLocal("achievement_page.moarachievementsredux.death"),
 
                 AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY,
                 AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_CREEPER,

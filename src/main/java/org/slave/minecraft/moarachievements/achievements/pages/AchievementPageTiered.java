@@ -6,7 +6,9 @@ import org.slave.minecraft.moarachievements.achievements.storage.AchievementStor
 
 public final class AchievementPageTiered extends AchievementPage {
 
-    public AchievementPageTiered() {
+    public static final AchievementPage ACHIEVEMENT_PAGE_TIERED = new AchievementPageTiered();
+
+    private AchievementPageTiered() {
         super(
                 StatCollector.translateToLocal("achievement_page.moarachievementsredux.tiers"),
 

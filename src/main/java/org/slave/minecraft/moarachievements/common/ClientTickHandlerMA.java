@@ -1,4 +1,5 @@
 package org.slave.minecraft.moarachievements.common;
+/*
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.ITickHandler;
@@ -271,3 +272,4 @@ public final class ClientTickHandlerMA implements ITickHandler {
     }
 
 }
+*/

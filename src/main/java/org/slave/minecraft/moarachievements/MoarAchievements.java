@@ -1,27 +1,28 @@
 package org.slave.minecraft.moarachievements;
 
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.MinecraftForge;
 import org.slave.minecraft.moarachievements.achievements.pages.AchievementPageDeath;
 import org.slave.minecraft.moarachievements.achievements.pages.AchievementPageTiered;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorage;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageDeath;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageTiered;
-import org.slave.minecraft.moarachievements.common.CraftingHandler;
 import org.slave.minecraft.moarachievements.common.EventHookContainer;
 import org.slave.minecraft.moarachievements.common.MoarConfiguration;
 import org.slave.minecraft.moarachievements.item.ItemAchievementGetter;
@@ -30,7 +31,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @Mod(modid = MoarAchievements.MOD_ID, name = MoarAchievements.NAME, version = "@VERSION@")
-@NetworkMod(clientSideRequired = true)
 public final class MoarAchievements {
 
     public static final String MOD_ID = "moararchievementsredux";
@@ -49,7 +49,7 @@ public final class MoarAchievements {
             MoarAchievements.NAME
     );
 
-    public static Item achievementGetterItem = null;
+    public static final Item ITEM_ACHIEVEMENT_GETTER = new ItemAchievementGetter();
 
     public static MoarConfiguration moarConfiguration;
 
@@ -62,13 +62,9 @@ public final class MoarAchievements {
         MoarAchievements.moarConfiguration = new MoarConfiguration();
         MoarAchievements.moarConfiguration.loadConfig(true);
 
-        MoarAchievements.achievementGetterItem = new ItemAchievementGetter(
-                MoarAchievements.moarConfiguration.getItemIdAchievementGetter()
-        );
-
         GameRegistry.registerItem(
-                MoarAchievements.achievementGetterItem,
-                MoarAchievements.MOD_ID + ':' + "achievementGetter"
+                MoarAchievements.ITEM_ACHIEVEMENT_GETTER,
+                "achievementGetter"
         );
     }
 
@@ -78,24 +74,23 @@ public final class MoarAchievements {
         AchievementStorageDeath.registerAchievements();
         AchievementStorageTiered.registerAchievements();
 
-        net.minecraftforge.common.AchievementPage.registerAchievementPage(
-                new AchievementPageDeath()
+        AchievementPage.registerAchievementPage(
+                AchievementPageDeath.ACHIEVEMENT_PAGE_DEATH
         );
-        net.minecraftforge.common.AchievementPage.registerAchievementPage(
-                new AchievementPageTiered()
+        AchievementPage.registerAchievementPage(
+                AchievementPageTiered.ACHIEVEMENT_PAGE_TIERED
         );
 
         MinecraftForge.EVENT_BUS.register(
                 new EventHookContainer()
         );
-        GameRegistry.registerCraftingHandler(
-                new CraftingHandler()
+        FMLCommonHandler.instance().bus().register(
+                new EventHookContainer()
         );
-        MoarAchievements.commonProxyMA.registerTickers();
 
         GameRegistry.addRecipe(
                 new ItemStack(
-                        MoarAchievements.achievementGetterItem,
+                        MoarAchievements.ITEM_ACHIEVEMENT_GETTER,
                         1
                 ),
 
@@ -104,10 +99,10 @@ public final class MoarAchievements {
                 "***",
 
                 '*',
-                Item.diamond,
+                Items.diamond,
 
                 '@',
-                Block.blockGold
+                Blocks.gold_block
         );
     }
 
