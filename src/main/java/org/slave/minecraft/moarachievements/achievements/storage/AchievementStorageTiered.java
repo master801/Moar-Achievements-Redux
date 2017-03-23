@@ -13,6 +13,7 @@ import org.slave.minecraft.moarachievements.achievements.AchievementMoar;
 public final class AchievementStorageTiered {
 
     public static final Achievement ACHIEVEMENT_MINE_SAND = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.mineSand",
             "moarachievementsredux.tiered.mineSand",
             -7,
             -7,
@@ -21,6 +22,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_MAKE_SANDSTONE = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.buildSandstone",
             "moarachievementsredux.tiered.buildSandstone",
             -8,
             -5,
@@ -29,6 +31,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_SMELT_GLASS = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.smeltGlass",
             "moarachievementsredux.tiered.smeltGlass",
             -6,
             -5,
@@ -37,6 +40,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_MAKE_GLASS_PANE = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.buildGlassPane",
             "moarachievementsredux.tiered.buildGlassPane",
             -6,
             -3,
@@ -45,6 +49,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_MINE_SNOW = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.mineSnow",
             "moarachievementsredux.tiered.mineSnow",
             -5,
             -7,
@@ -53,6 +58,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_MAKE_SNOW = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.buildSnow",
             "moarachievementsredux.tiered.buildSnow",
             -5,
             -5,
@@ -61,6 +67,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_MINE_GLOWSTONE_DUST = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.mineGlowStoneDust",
             "moarachievementsredux.tiered.mineGlowStoneDust",
             -3,
             -7,
@@ -69,6 +76,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_MAKE_GLOWSTONE = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.buildGlowStone",
             "moarachievementsredux.tiered.buildGlowStone",
             -3,
             -5,
@@ -77,6 +85,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_MINE_MUSHROOM_RED = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.mineMushroomRed",
             "moarachievementsredux.tiered.mineMushroomRed",
             0,
             -7,
@@ -85,6 +94,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_MINE_MUSHROOM_BROWN = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.mineMushroomBrown",
             "moarachievementsredux.tiered.mineMushroomBrown",
             -2,
             -7,
@@ -93,6 +103,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_MAKE_MUSHROOM_STEW = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.makeMushroomStew",
             "moarachievementsredux.tiered.makeMushroomStew",
             -1,
             -5,
@@ -101,6 +112,7 @@ public final class AchievementStorageTiered {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_EAT_MUSHROOM_STEW = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.eatMushroomStew",
             "moarachievementsredux.tiered.eatMushroomStew",
             -1,
             -3,
@@ -109,6 +121,7 @@ public final class AchievementStorageTiered {
     );
 
     public static final Achievement ACHIEVEMENT_MINE_CLAY = new AchievementMoar(
+            "achievement.moarachievementsredux.tiered.mineClay",
             "moarachievementsredux.tiered.mineClay",
             1,
             -7,

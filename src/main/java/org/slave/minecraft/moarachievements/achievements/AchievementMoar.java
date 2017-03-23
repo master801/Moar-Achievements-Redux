@@ -12,10 +12,10 @@ import net.minecraft.stats.Achievement;
  */
 public class AchievementMoar extends Achievement {
 
-    public AchievementMoar(final String achievementId, final int displayColumn, final int displayRow, final Item item, final Achievement parent) {
+    public AchievementMoar(final String achievementId, final String achievementName, final int displayColumn, final int displayRow, final Item item, final Achievement parent) {
         super(
                 achievementId,
-                achievementId,
+                achievementName,
                 displayColumn,
                 displayRow,
                 item,
@@ -23,10 +23,10 @@ public class AchievementMoar extends Achievement {
         );
     }
 
-    public AchievementMoar(final String achievementId, final int displayColumn, final int displayRow, final Block block, final Achievement parent) {
+    public AchievementMoar(final String achievementId, final String achievementName, final int displayColumn, final int displayRow, final Block block, final Achievement parent) {
         super(
                 achievementId,
-                achievementId,
+                achievementName,
                 displayColumn,
                 displayRow,
                 block,
@@ -34,20 +34,15 @@ public class AchievementMoar extends Achievement {
         );
     }
 
-    public AchievementMoar(final String achievementId, final int displayColumn, final int displayRow, final ItemStack itemStack, final Achievement parent) {
+    public AchievementMoar(final String achievementId, final String achievementName, final int displayColumn, final int displayRow, final ItemStack itemStack, final Achievement parent) {
         super(
                 achievementId,
-                achievementId,
+                achievementName,
                 displayColumn,
                 displayRow,
                 itemStack,
                 parent
         );
-    }
-
-    @Override
-    public Achievement registerStat() {
-        return super.registerStat();
     }
 
 }

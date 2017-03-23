@@ -13,6 +13,7 @@ import org.slave.minecraft.moarachievements.achievements.AchievementMoar;
 public final class AchievementStorageDeath {
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ANY = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByAny",
             "moarachievementsredux.death.killedByAny",
             0,
             0,
@@ -21,6 +22,7 @@ public final class AchievementStorageDeath {
     ).initIndependentStat();
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_CREEPER = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByCreeper",
             "moarachievementsredux.death.killedByCreeper",
             -2,
             0,
@@ -29,6 +31,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ENDERMAN = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByEnderman",
             "moarachievementsredux.death.killedByEnderman",
             2,
             0,
@@ -37,6 +40,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ANVIL = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByAnvil",
             "moarachievementsredux.death.killedByAnvil",
             0,
             -1,
@@ -45,6 +49,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_WALL = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByWall",
             "moarachievementsredux.death.killedByWall",
             1,
             -1,
@@ -53,6 +58,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_FLAME = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByFlame",
             "moarachievementsredux.death.killedByFlame",
             -1,
             -1,
@@ -61,6 +67,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_FIRE = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByFire",
             "moarachievementsredux.death.killedByFire",
             2,
             -1,
@@ -69,6 +76,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_BLAZE = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByBlaze",
             "moarachievementsredux.death.killedByBlaze",
             -2,
             -1,
@@ -77,6 +85,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_GHAST = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByGhast",
             "moarachievementsredux.death.killedByGhast",
             0,
             -2,
@@ -85,6 +94,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_FALL = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByFall",
             "moarachievementsredux.death.killedByFall",
             1,
             -2,
@@ -93,6 +103,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_FIRE_DISPENSER = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByFireDispenser",
             "moarachievementsredux.death.killedByFireDispenser",
             -1,
             -2,
@@ -101,6 +112,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ARROW_DISPENSER = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByArrowDispenser",
             "moarachievementsredux.death.killedByArrowDispenser",
             2,
             -2,
@@ -109,6 +121,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_WATER = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByWater",
             "moarachievementsredux.death.killedByWater",
             -2,
             -2,
@@ -117,6 +130,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_IRON = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByIron",
             "moarachievementsredux.death.killedByIron",
             3,
             -2,
@@ -125,6 +139,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_SPACE = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedBySpace",
             "moarachievementsredux.death.killedBySpace",
             -3,
             -2,
@@ -133,6 +148,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ZOMBIE = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByZombie",
             "moarachievementsredux.death.killedByZombie",
             0,
             -3,
@@ -141,6 +157,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ZOMBIE_VILLAGER = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByZombieVillager",
             "moarachievementsredux.death.killedByZombieVillager",
             3,
             -3,
@@ -149,6 +166,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ZOMBIE_VILLAGER_CHILD = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByZombieVillagerChild",
             "moarachievementsredux.death.killedByZombieVillagerChild",
             -3,
             -3,
@@ -157,6 +175,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ZOMBIE_SWORD = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByZombieSword",
             "moarachievementsredux.death.killedByZombieSword",
             0,
             -4,
@@ -165,6 +184,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_ZOMBIE_DIAMOND = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByZombieDiamond",
             "moarachievementsredux.death.killedByZombieDiamond",
             1,
             -4,
@@ -173,6 +193,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_SKELETON = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedBySkeleton",
             "moarachievementsredux.death.killedBySkeleton",
             -1,
             -4,
@@ -181,6 +202,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_SPIDER = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedBySpider",
             "moarachievementsredux.death.killedBySpider",
             2,
             -4,
@@ -189,6 +211,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_DRAGON = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByDragon",
             "moarachievementsredux.death.killedByDragon",
             -2,
             -4,
@@ -197,6 +220,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_WITHER = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByWither",
             "moarachievementsredux.death.killedByWither",
             3,
             -4,
@@ -205,6 +229,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_THROWN_POTION = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByThrownPotion",
             "moarachievementsredux.death.killedByThrownPotion",
             -3,
             -4,
@@ -213,6 +238,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_POTION = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByPotion",
             "moarachievementsredux.death.killedByPotion",
             0,
             -5,
@@ -221,6 +247,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_SMALL_SLIME = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedBySmallSlime",
             "moarachievementsredux.death.killedBySmallSlime",
             1,
             -5,
@@ -229,6 +256,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_MEDIUM_SLIME = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByMediumSlime",
             "moarachievementsredux.death.killedByMediumSlime",
             -1,
             -5,
@@ -237,6 +265,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_LARGE_SLIME = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByLargeSlime",
             "moarachievementsredux.death.killedByLargeSlime",
             2,
             -5,
@@ -245,6 +274,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_HUGE_SLIME = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedByHugeSlime",
             "moarachievementsredux.death.killedByHugeSlime",
             -2,
             -5,
@@ -253,6 +283,7 @@ public final class AchievementStorageDeath {
     );
 
     public static final Achievement ACHIEVEMENT_KILLED_BY_SELF = new AchievementMoar(
+            "achievement.moarachievementsredux.death.killedBySelf",
             "moarachievementsredux.death.killedBySelf",
             0,
             1,

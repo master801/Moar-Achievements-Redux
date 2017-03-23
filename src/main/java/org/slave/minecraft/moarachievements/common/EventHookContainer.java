@@ -1,13 +1,8 @@
 package org.slave.minecraft.moarachievements.common;
 
-import cpw.mods.fml.client.FMLClientHandler;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemSmeltedEvent;
-import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.boss.EntityDragon;
@@ -24,22 +19,15 @@ import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.entity.living.LivingFallEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 import org.slave.minecraft.moarachievements.MoarAchievements;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorage;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageDeath;
@@ -49,8 +37,10 @@ public final class EventHookContainer {
 
     boolean annoyed = false;
 
+    public static final EventHookContainer INSTANCE = new EventHookContainer();
+
     @SubscribeEvent
-    public void itemPickup(EntityItemPickupEvent event) {
+    public void itemPickup(final EntityItemPickupEvent event) {
         if (event.item == null || event.item.getEntityItem() == null) return;
         ItemStack itemStack = event.item.getEntityItem();
 
@@ -59,7 +49,8 @@ public final class EventHookContainer {
                     AchievementStorageTiered.ACHIEVEMENT_MINE_SAND
             );
         } else if (itemStack.getItem() == Items.snowball) {
-            event.entityPlayer.triggerAchievement(AchievementStorageTiered.ACHIEVEMENT_MINE_SNOW
+            event.entityPlayer.triggerAchievement(
+                    AchievementStorageTiered.ACHIEVEMENT_MINE_SNOW
             );
         } else if (itemStack.getItem() == Items.coal && itemStack.getItemDamage() == 0) {
             event.entityPlayer.triggerAchievement(
@@ -138,7 +129,6 @@ public final class EventHookContainer {
                     AchievementStorage.ACHIEVEMENT_MINE_WHEAT
             );
         }
-
     }
 
     @SubscribeEvent
@@ -302,22 +292,22 @@ public final class EventHookContainer {
                 );
             }
 
-            ItemStack slime2 = ((EntityLivingBase)event.source.getSourceOfDamage()).getHeldItem();
-            if (slime2 != null) {
-                if (slime2.getItem() == Items.diamond) {
+            ItemStack zombieHeldItem = ((EntityLivingBase)event.source.getSourceOfDamage()).getHeldItem();
+            if (zombieHeldItem != null) {
+                if (zombieHeldItem.getItem() == Items.diamond) {
                     ((EntityPlayer)event.entity).triggerAchievement(
                             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE_DIAMOND
                     );
                 }
 
-                if (slime2.getItem() == Items.wooden_sword || slime2.getItem() == Items.stone_sword || slime2.getItem() == Items.golden_sword || slime2.getItem() == Items.iron_sword || slime2.getItem() == Items.diamond_sword) {
+                if (zombieHeldItem.getItem() == Items.wooden_sword || zombieHeldItem.getItem() == Items.stone_sword || zombieHeldItem.getItem() == Items.golden_sword || zombieHeldItem.getItem() == Items.iron_sword || zombieHeldItem.getItem() == Items.diamond_sword) {
                     ((EntityPlayer)event.entity).triggerAchievement(
                             AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE_SWORD
                     );
                 }
             }
 
-            if (!((EntityZombie)event.source.getSourceOfDamage()).isVillager() && !((EntityLivingBase)event.source.getSourceOfDamage()).isChild() && slime2 == null) {
+            if (!((EntityZombie)event.source.getSourceOfDamage()).isVillager() && !((EntityLivingBase)event.source.getSourceOfDamage()).isChild() && zombieHeldItem == null) {
                 ((EntityPlayer)event.entity).triggerAchievement(
                         AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ZOMBIE
                 );
@@ -382,7 +372,7 @@ public final class EventHookContainer {
                 EntityFireball living1 = (EntityFireball)event.source.getSourceOfDamage();
             }
 
-            setPlayerDiedRecently();
+//            setPlayerDiedRecently();
             ((EntityPlayer)event.entity).triggerAchievement(
                     AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY
             );
@@ -400,6 +390,7 @@ public final class EventHookContainer {
         }
     }
 
+    /*
     @SubscribeEvent
     public void fallEvent(LivingFallEvent event) {
         if (event.entityLiving instanceof EntityPlayer) {
@@ -448,12 +439,13 @@ public final class EventHookContainer {
             );
         }
     }
+    */
 
     @SubscribeEvent
     public void livingEvent(LivingEvent event) {
         if (event.entityLiving instanceof EntityPlayer) {
 //            ItemStack usedItems = event.entityLiving.getCurrentItemsOrArmor(0);
-            ItemStack usedItems = ((EntityPlayer)event.entityLiving).getHeldItem();//FIXME? This may not be the correct function to use
+            ItemStack usedItems = event.entityLiving.getHeldItem();//FIXME? This may not be the correct function to use
             if (!event.entityLiving.isSneaking() && MoarAchievements.entityPlayer == null) {
                 if (usedItems != null && usedItems.getItem() == Items.cooked_porkchop && !annoyed) {
                     annoyed = true;
@@ -614,235 +606,6 @@ public final class EventHookContainer {
             itemSmeltedEvent.player.triggerAchievement(
                     AchievementStorageTiered.ACHIEVEMENT_SMELT_GLASS
             );
-        }
-    }
-
-    //Tick handler stuff
-
-    private EntityPlayer player;
-    private EntityLivingBase entity;
-    private Achievement achievement;
-    private int ticksLeft;
-    private int recentDeathTicks;
-    private int tempX1 = 0;
-    private int tempZ1 = 0;
-    public int obsidianPlaced = 0;
-    public int obsidianChieve = 0;
-    private World world;
-    boolean annoyed_tick = false;
-    private boolean ticking = false;
-    public boolean playerDiedRecently = false;
-
-    @SubscribeEvent
-    public void onPlayerTick(final PlayerTickEvent playerTickEvent) {
-        checkPlayerInCave();
-        runAchievementTicker(
-                MoarAchievements.entityPlayer
-        );
-        checkPlayerLevel(
-                MoarAchievements.entityPlayer
-        );
-        checkPlayerDeath();
-        checkObsidian(
-                MoarAchievements.entityPlayer
-        );
-    }
-
-    private void checkPlayerLevel(final EntityPlayer entityPlayer) {
-        if (entityPlayer != null) {
-            if (entityPlayer.experienceLevel >= 1) {
-                entityPlayer.triggerAchievement(
-                        AchievementStorage.ACHIEVEMENT_LEVEL_1
-                );
-            }
-
-            if (entityPlayer.experienceLevel >= 2) {
-                entityPlayer.triggerAchievement(
-                        AchievementStorage.ACHIEVEMENT_LEVEL_2
-                );
-            }
-
-            if (entityPlayer.experienceLevel >= 3) {
-                entityPlayer.triggerAchievement(
-                        AchievementStorage.ACHIEVEMENT_LEVEL_3
-                );
-            }
-
-            if (entityPlayer.experienceLevel >= 4) {
-                entityPlayer.triggerAchievement(
-                        AchievementStorage.ACHIEVEMENT_LEVEL_4
-                );
-            }
-
-            if (entityPlayer.experienceLevel >= 5) {
-                entityPlayer.triggerAchievement(
-                        AchievementStorage.ACHIEVEMENT_LEVEL_5
-                );
-            }
-
-            if (entityPlayer.experienceLevel >= 10) {
-                entityPlayer.triggerAchievement(
-                        AchievementStorage.ACHIEVEMENT_LEVEL_10
-                );
-            }
-        }
-    }
-
-    public void checkPlayerInCave() {
-        player = FMLClientHandler.instance().getClient().thePlayer;
-        world = FMLClientHandler.instance().getClient().theWorld;
-        if (player != null && world != null && player.posY <= 55.0D && world.getBlockLightValue((int)player.posX, (int)player.posY, (int)player.posZ) <= 5) {
-            player.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_ENTER_CAVE
-            );
-        }
-    }
-
-    public void runAchievementTicker(final EntityPlayer entityPlayer) {
-        if (ticking) {
-            if (ticksLeft > 0) {
-                --ticksLeft;
-            } else {
-                ticking = false;
-                if (achievement != null && entityPlayer != null) {
-                    if (achievement.statId.equals(AchievementStorage.ACHIEVEMENT_LIVE_FALLING.statId)) {
-                        if (playerDiedRecently) return;
-                        entityPlayer.triggerAchievement(
-                                achievement
-                        );
-                    }
-                    entityPlayer.addStat(
-                            achievement,
-                            1
-                    );
-                } else if (!annoyed_tick && FMLCommonHandler.instance().getSide().isClient()) {
-                    Minecraft mc = FMLClientHandler.instance().getClient();
-                    mc.ingameGUI.getChatGUI().printChatMessage(
-                            new ChatComponentText("If you are playing in multiplayer, this falling bug is being fixed.")
-                    );
-                    annoyed_tick = true;
-                }
-            }
-        }
-
-    }
-
-    public void checkPlayerDeath() {
-        if (playerDiedRecently && recentDeathTicks == 0) recentDeathTicks = 20;
-        if (recentDeathTicks > 0) {
-            --recentDeathTicks;
-            if (recentDeathTicks == 0) playerDiedRecently = false;
-        }
-    }
-
-    public void registerAchievementToGet(final EntityLivingBase entity, final Achievement achievement, final int ticks) {
-        if (!ticking) {
-            this.entity = entity;
-            this.achievement = achievement;
-            ticksLeft = ticks;
-            ticking = true;
-        }
-    }
-
-    public void setPlayerDiedRecently() {
-        playerDiedRecently = true;
-    }
-
-    private void checkObsidian(final EntityPlayer entityPlayer) {
-        if (obsidianChieve >= 1) {
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_1
-            );
-        }
-
-        if (obsidianChieve >= 2) {
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_2
-            );
-        }
-
-        if (obsidianChieve >= 3) {
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_3
-            );
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_4
-            );
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_5
-            );
-        }
-
-        if (obsidianChieve >= 4) {
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_6
-            );
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_7
-            );
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_8
-            );
-        }
-
-        if (obsidianChieve >= 5) {
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_9
-            );
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_OBSIDIAN_10
-            );
-        }
-
-        if (obsidianChieve >= 6) {
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_PORTAL_11
-            );
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_PORTAL_12
-            );
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_PORTAL_13
-            );
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_PORTAL_14
-            );
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_PORTAL_15
-            );
-            entityPlayer.triggerAchievement(
-                    AchievementStorage.ACHIEVEMENT_PORTAL_16
-            );
-        }
-    }
-
-    public void setPassback(final World world, final int posX, final int posY, final int posZ) {
-        Block block = world.getBlock(posX, posY, posZ);
-        if (block == Blocks.obsidian) {
-            if (obsidianPlaced >= 0 && obsidianChieve < 1) {
-                obsidianChieve = 1;
-            } else if (obsidianPlaced >= 1 && obsidianChieve < 2) {
-                if (world.getBlock(posX + 1, posY, posZ) == Blocks.obsidian || world.getBlock(posX - 1, posY, posZ) == Blocks.obsidian || world.getBlock(posX, posY, posZ + 1) == Blocks.obsidian || world.getBlock(posX, posY, posZ - 1) == Blocks.obsidian) {
-                    obsidianChieve = 2;
-                }
-            } else if (obsidianPlaced >= 4 && obsidianChieve < 3) {
-                if (world.getBlock(posX, posY + 1, posZ) == Blocks.obsidian && world.getBlock(posX, posY - 1, posZ) == Blocks.obsidian || world.getBlock(posX, posY + 1, posZ) == Blocks.obsidian && world.getBlock(posX, posY + 2, posZ) == Blocks.obsidian || world.getBlock(posX, posY - 1, posZ) == Blocks.obsidian && world.getBlock(posX, posY - 2, posZ) == Blocks.obsidian) {
-                    tempX1 = posX;
-                    tempZ1 = posZ;
-                    obsidianChieve = 3;
-                }
-            } else if (obsidianPlaced >= 7 && obsidianChieve < 4) {
-                if (world.getBlock(posX, posY + 1, posZ) == Blocks.obsidian && world.getBlock(posX, posY - 1, posZ) == Blocks.obsidian || world.getBlock(posX, posY + 1, posZ) == Blocks.obsidian && world.getBlock(posX, posY + 2, posZ) == Blocks.obsidian || world.getBlock(posX, posY - 1, posZ) == Blocks.obsidian && world.getBlock(posX, posY - 2, posZ) == Blocks.obsidian && tempX1 != posX || tempZ1 != posZ) {
-                    obsidianChieve = 4;
-                }
-            } else if (obsidianPlaced >= 9 && obsidianChieve < 5 && (world.getBlock(posX + 1, posY, posZ) == Blocks.obsidian || world.getBlock(posX - 1, posY, posZ) == Blocks.obsidian || world.getBlock(posX, posY, posZ + 1) == Blocks.obsidian || world.getBlock(posX, posY, posZ - 1) == Blocks.obsidian)) {
-                obsidianChieve = 5;
-            }
-            ++obsidianPlaced;
-        }
-
-        if (block == Blocks.fire && obsidianChieve == 5 && world.getBlock(posX, posY - 1, posZ) == Blocks.obsidian) {
-            obsidianChieve = 6;
         }
     }
 

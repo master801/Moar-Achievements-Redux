@@ -5,6 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
+import net.minecraft.stats.AchievementList;
 import net.minecraft.world.World;
 import org.slave.minecraft.moarachievements.MoarAchievements;
 import org.slave.minecraft.moarachievements.achievements.pages.AchievementPageDeath;
@@ -36,16 +37,16 @@ public final class ItemAchievementGetter extends Item {
             );
 
             for(Achievement achievement : achievements) {
+                if (!AchievementList.achievementList.contains(achievement)) continue;
                 entityPlayer.addStat(
                         achievement,
                         1
                 );
             }
 
-            if (!entityPlayer.capabilities.isCreativeMode) {
-                --itemStack.stackSize;
-                if (itemStack.stackSize < 1) return null;
-            }
+            //FIXME
+//            --itemStack.stackSize;
+//            if (itemStack.stackSize < 1) return null;
         }
         return itemStack;
     }
