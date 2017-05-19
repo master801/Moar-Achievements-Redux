@@ -442,7 +442,7 @@ public final class EventHookContainer {
     */
 
     @SubscribeEvent
-    public void livingEvent(LivingEvent event) {
+    public void livingEvent(final LivingEvent event) {
         if (event.entityLiving instanceof EntityPlayer) {
 //            ItemStack usedItems = event.entityLiving.getCurrentItemsOrArmor(0);
             ItemStack usedItems = event.entityLiving.getHeldItem();//FIXME? This may not be the correct function to use
