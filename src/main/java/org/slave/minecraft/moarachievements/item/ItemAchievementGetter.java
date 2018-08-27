@@ -29,19 +29,12 @@ public final class ItemAchievementGetter extends Item {
         if (!world.isRemote && entityPlayer.capabilities.isCreativeMode) {
 
             List<Achievement> achievements = new ArrayList<>();
-            achievements.addAll(
-                    AchievementPageTiered.ACHIEVEMENT_PAGE_TIERED.getAchievements()
-            );
-            achievements.addAll(
-                    AchievementPageDeath.ACHIEVEMENT_PAGE_DEATH.getAchievements()
-            );
+            achievements.addAll(AchievementPageTiered.ACHIEVEMENT_PAGE_TIERED.getAchievements());
+            achievements.addAll(AchievementPageDeath.ACHIEVEMENT_PAGE_DEATH.getAchievements());
 
             for(Achievement achievement : achievements) {
                 if (!AchievementList.achievementList.contains(achievement)) continue;
-                entityPlayer.addStat(
-                        achievement,
-                        1
-                );
+                entityPlayer.triggerAchievement(achievement);
             }
 
             //FIXME

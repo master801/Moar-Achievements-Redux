@@ -19,9 +19,10 @@ import org.slave.minecraft.moarachievements.achievements.pages.AchievementPageTi
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorage;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageDeath;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageTiered;
-import org.slave.minecraft.moarachievements.common.EventHookContainer;
+import org.slave.minecraft.moarachievements.hook.EventHookContainer;
 import org.slave.minecraft.moarachievements.common.MoarConfiguration;
 import org.slave.minecraft.moarachievements.common.PlayerEventHandler;
+import org.slave.minecraft.moarachievements.hook.PlayerEventHook;
 import org.slave.minecraft.moarachievements.item.ItemAchievementGetter;
 import org.slave.minecraft.moarachievements.proxy.CommonProxyMA;
 import org.slf4j.Logger;
@@ -42,9 +43,7 @@ public final class MoarAchievements {
     )
     public static CommonProxyMA commonProxyMA;
 
-    public static final Logger LOGGER_MOAR_ACHIEVEMENTS = LoggerFactory.getLogger(
-            MoarAchievements.NAME
-    );
+    public static final Logger LOGGER_MOAR_ACHIEVEMENTS = LoggerFactory.getLogger(MoarAchievements.NAME);
 
     public static final Item ITEM_ACHIEVEMENT_GETTER = new ItemAchievementGetter();
 
@@ -71,25 +70,17 @@ public final class MoarAchievements {
         AchievementStorageDeath.registerAchievements();
         AchievementStorageTiered.registerAchievements();
 
-        AchievementPage.registerAchievementPage(
-                AchievementPageDeath.ACHIEVEMENT_PAGE_DEATH
-        );
-        AchievementPage.registerAchievementPage(
-                AchievementPageTiered.ACHIEVEMENT_PAGE_TIERED
-        );
+        AchievementPage.registerAchievementPage(AchievementPageDeath.ACHIEVEMENT_PAGE_DEATH);
+        AchievementPage.registerAchievementPage(AchievementPageTiered.ACHIEVEMENT_PAGE_TIERED);
 
-        MinecraftForge.EVENT_BUS.register(
-                EventHookContainer.INSTANCE
-        );
-        FMLCommonHandler.instance().bus().register(
-                PlayerEventHandler.INSTANCE
-        );
+        MinecraftForge.EVENT_BUS.register(EventHookContainer.INSTANCE);
+        FMLCommonHandler.instance().bus().register(PlayerEventHandler.INSTANCE);
+
+        MinecraftForge.EVENT_BUS.register(PlayerEventHook.INSTANCE);
+        FMLCommonHandler.instance().bus().register(PlayerEventHook.INSTANCE);
 
         GameRegistry.addRecipe(
-                new ItemStack(
-                        MoarAchievements.ITEM_ACHIEVEMENT_GETTER,
-                        1
-                ),
+                new ItemStack(MoarAchievements.ITEM_ACHIEVEMENT_GETTER),
 
                 "***",
                 "*@*",

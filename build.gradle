@@ -14,12 +14,17 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
     }
 }
+repositories {
+    maven {
+        url = project.properties['artifactory_contextUrl'] + '/gradle-dev-local'
+    }
+}
 
 apply plugin: 'java'
 apply plugin: 'forge'
 
-sourceCompatibility = JavaVersion.VERSION_1_7
-targetCompatibility = JavaVersion.VERSION_1_7
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 version = project.properties['version']
 group = 'org.slave.minecraft'
@@ -38,7 +43,10 @@ minecraft {
 processResources {
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod/info'
-        expand 'version': project.version, 'mcversion': project.minecraft.version
+        expand(
+                'version': project.version,
+                'mcversion': project.minecraft.version
+        )
     }
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
@@ -46,9 +54,34 @@ processResources {
 }
 
 dependencies {
-    compile group: 'org.slf4j', name: 'slf4j-api', version: project.properties['sl4j-version']
-    compile group: 'org.slf4j', name: 'slf4j-jdk14', version: project.properties['slf4j-jdk14-version']
+    compile(
+            group: 'org.slf4j',
+            name: 'slf4j-api',
+            version: project.properties['sl4j-version']
+    )
+    compile(
+            group: 'org.slf4j',
+            name: 'slf4j-jdk14',
+            version: project.properties['slf4j-jdk14-version']
+    )
 
+    compile(
+            group: 'org.slave.lib',
+            name: 'lib',
+            version: project.properties['slave-lib-version']
+    )
+    compile(
+            group: 'org.slave.lib',
+            name: 'minecraft',
+            version: project.properties['slave-lib-version']
+    )
+    compile(
+            group: 'org.slave.lib',
+            name: 'minecraft-asm',
+            version: project.properties['slave-lib-version']
+    )
+
+    /*
     compile fileTree(
             dir: 'libs',
             exclude: [
@@ -58,6 +91,7 @@ dependencies {
                     '*.jar'
             ]
     )
+    */
 }
 
 task makeSrcJar(type: Jar) {
