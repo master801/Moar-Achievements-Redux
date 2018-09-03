@@ -42,10 +42,10 @@ minecraft {
 
 processResources {
     from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod/info'
+        include 'mcmod.info'
         expand(
                 'version': project.version,
-                'mcversion': project.minecraft.version
+                'mc_version': project.minecraft.version
         )
     }
     from(sourceSets.main.resources.srcDirs) {
@@ -63,22 +63,6 @@ dependencies {
             group: 'org.slf4j',
             name: 'slf4j-jdk14',
             version: project.properties['slf4j-jdk14-version']
-    )
-
-    compile(
-            group: 'org.slave.lib',
-            name: 'lib',
-            version: project.properties['slave-lib-version']
-    )
-    compile(
-            group: 'org.slave.lib',
-            name: 'minecraft',
-            version: project.properties['slave-lib-version']
-    )
-    compile(
-            group: 'org.slave.lib',
-            name: 'minecraft-asm',
-            version: project.properties['slave-lib-version']
     )
 
     /*

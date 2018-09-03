@@ -22,6 +22,7 @@ import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.world.BlockEvent.PlaceEvent;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorage;
@@ -98,7 +99,7 @@ public final class EventHookContainer {
         }
 
         if (event.entity instanceof EntityPlayer) {
-            achievePlayerDamageType(event.source.getDamageType(), (EntityPlayer)event.entity, passFireCheck);
+            achievePlayerDamageType(event.source, (EntityPlayer)event.entity, passFireCheck);
         }
 
         if (event.source.getSourceOfDamage() instanceof EntityEnderman && event.entity instanceof EntityPlayer) {
@@ -175,7 +176,7 @@ public final class EventHookContainer {
             }
 
 //            setPlayerDiedRecently();
-            ((EntityPlayer)event.entity).triggerAchievement(AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY);
+            player.triggerAchievement(AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANY);
             int posX = (int)event.entity.posX;
             int posY = (int)event.entity.posY;
             int posZ = (int)event.entity.posZ;
@@ -186,11 +187,13 @@ public final class EventHookContainer {
         }
     }
 
-    private void achievePlayerDamageType(final String damageType, final EntityPlayer player, final boolean passFireCheck) {
-        switch (damageType) {
+    private void achievePlayerDamageType(final DamageSource damageType, final EntityPlayer player, final boolean passFireCheck) {
+        switch (damageType.getDamageType()) {
             case "wither":
+                player.triggerAchievement(AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_WITHER);
                 break;
             case "explosion":
+                //TODO
                 break;
             case "anvil":
                 player.triggerAchievement(AchievementStorageDeath.ACHIEVEMENT_KILLED_BY_ANVIL);

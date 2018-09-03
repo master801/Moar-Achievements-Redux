@@ -1,5 +1,6 @@
 package org.slave.minecraft.moarachievements.common;
 
+import cpw.mods.fml.common.Loader;
 import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
@@ -16,9 +17,7 @@ public final class MoarConfiguration {
     public MoarConfiguration() {
         configuration = new Configuration(
                 new File(
-                        new File(
-                                "config"
-                        ),
+                        Loader.instance().getConfigDir(),
                         "MoarAchievementsRedux.cfg"
                 )
         );
@@ -26,7 +25,7 @@ public final class MoarConfiguration {
 
     public void loadConfig(final boolean shouldLoad) {
         if (shouldLoad) configuration.load();
-        //Nothing
+        //NOOP
         configuration.save();
     }
 

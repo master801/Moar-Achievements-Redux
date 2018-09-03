@@ -1,7 +1,6 @@
 package org.slave.minecraft.moarachievements.hook;
 
 import com.google.common.collect.Maps;
-import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemSmeltedEvent;
@@ -13,9 +12,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatBase;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
+import net.minecraftforge.event.entity.player.AchievementEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.event.entity.player.PlayerUseItemEvent;
-import org.apache.logging.log4j.Level;
+import org.slave.minecraft.moarachievements.MoarAchievements;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorage;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageTiered;
 
@@ -33,15 +33,17 @@ public final class PlayerEventHook {
     public static final PlayerEventHook INSTANCE = new PlayerEventHook();
 
     private final Map<Item, Entry<Integer, StatBase>> achievementItemPickup = Maps.newHashMap();
-    private final Map<Item, StatBase> achievementItemCrafted = Maps.newHashMap();
     private final Map<Item, StatBase> achievementItemAte = Maps.newHashMap();
+    private final Map<Item, StatBase> achievementItemCrafted = Maps.newHashMap();
+    private final Map<Item, StatBase> achievementItemSmelted = Maps.newHashMap();
 
     private boolean annoyed = false;
 
     private PlayerEventHook() {
         initItemPickupAchievements();
-        initItemCraftedAchievements();
         initItemAteAchievements();
+        initItemCraftedAchievements();
+        initItemSmeltedAchievements();
     }
 
     private void initItemPickupAchievements() {
@@ -66,6 +68,13 @@ public final class PlayerEventHook {
         achievementItemPickup.put(Item.getItemFromBlock(Blocks.cobblestone), new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_COBBLESTONE));
         achievementItemPickup.put(Items.clay_ball, new SimpleEntry<>(0, AchievementStorageTiered.ACHIEVEMENT_MINE_CLAY));
         achievementItemPickup.put(Items.wheat, new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_WHEAT));
+
+        achievementItemPickup.put(MoarAchievements.ITEM_ACHIEVEMENT_GETTER, new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_HOW_IS_THIS_POSSIBLE));
+    }
+
+    private void initItemAteAchievements() {
+        achievementItemAte.put(Items.cooked_porkchop, AchievementStorage.ACHIEVEMENT_EAT_BACON);
+        achievementItemAte.put(Items.mushroom_stew, AchievementStorageTiered.ACHIEVEMENT_EAT_MUSHROOM_STEW);
     }
 
     private void initItemCraftedAchievements() {
@@ -104,35 +113,30 @@ public final class PlayerEventHook {
         achievementItemCrafted.put(Items.mushroom_stew, AchievementStorageTiered.ACHIEVEMENT_MAKE_MUSHROOM_STEW);
     }
 
-    private void initItemAteAchievements() {
-        achievementItemAte.put(Items.cooked_porkchop, AchievementStorage.ACHIEVEMENT_EAT_BACON);
-        achievementItemAte.put(Items.mushroom_stew, AchievementStorageTiered.ACHIEVEMENT_EAT_MUSHROOM_STEW);
+    private void initItemSmeltedAchievements() {
+        achievementItemSmelted.put(Item.getItemFromBlock(Blocks.stone), AchievementStorage.ACHIEVEMENT_SMELT_COBBLESTONE);
+        achievementItemSmelted.put(Item.getItemFromBlock(Blocks.glass), AchievementStorageTiered.ACHIEVEMENT_SMELT_GLASS);
     }
 
     @SubscribeEvent
     public void onCrafting(final ItemCraftedEvent itemCraftedEvent) {
-        if (itemCraftedEvent.player.worldObj.isRemote) return;
         ItemStack itemStack = itemCraftedEvent.crafting;
         if (itemStack == null) return;
 
-        if (this.achievementItemCrafted.containsKey(itemStack.getItem())) {
+        if (achievementItemCrafted.containsKey(itemStack.getItem())) {
             itemCraftedEvent.player.triggerAchievement(achievementItemCrafted.get(itemStack.getItem()));
-        } else {
-            if (itemStack.getItem().isMap()) {
-                itemCraftedEvent.player.triggerAchievement(AchievementStorage.ACHIEVEMENT_MAKE_MAP);
-            }
+        } else if (itemStack.getItem().isMap()) {
+            itemCraftedEvent.player.triggerAchievement(AchievementStorage.ACHIEVEMENT_MAKE_MAP);
         }
     }
 
     @SubscribeEvent
     public void onSmelted(final ItemSmeltedEvent itemSmeltedEvent) {
-        if (itemSmeltedEvent.player.worldObj.isRemote) return;
         ItemStack itemStack = itemSmeltedEvent.smelting;
+        if (itemStack == null) return;
 
-        if (itemStack.getItem() == Item.getItemFromBlock(Blocks.stone)) {
-            itemSmeltedEvent.player.triggerAchievement(AchievementStorage.ACHIEVEMENT_SMELT_COBBLESTONE);
-        } else if (itemStack.getItem() == Item.getItemFromBlock(Blocks.glass)) {
-            itemSmeltedEvent.player.triggerAchievement(AchievementStorageTiered.ACHIEVEMENT_SMELT_GLASS);
+        if (achievementItemSmelted.containsKey(itemStack.getItem())) {
+            itemSmeltedEvent.player.triggerAchievement(achievementItemSmelted.get(itemStack.getItem()));
         }
     }
 
@@ -193,16 +197,18 @@ public final class PlayerEventHook {
     @SubscribeEvent
     public void fallEvent(final LivingFallEvent event) {
         if (event.entityLiving instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer)event.entityLiving;
-            if (player.deathTime > 0) {
-                //TODO
-                FMLLog.log(Level.INFO, "");
-            }
+            EntityPlayer player = (EntityPlayer) event.entityLiving;
 
-//            if (event.distance >= 21.0F && !playerDiedRecently) {
-//                registerAchievementToGet(event.entityLiving, AchievementStorage.ACHIEVEMENT_LIVE_FALLING, 5);
-//            }
+            if (player.onGround && player.deathTime == 0 && event.distance >= 21.0F) {//TODO Death time may not be correct?
+                player.triggerAchievement(AchievementStorage.ACHIEVEMENT_LIVE_FALLING);
+//                registerAchievementToGet(event.entityLiving, AchievementStorage.ACHIEVEMENT_LIVE_FALLING, 5);//TODO
+            }
         }
+    }
+
+    @SubscribeEvent
+    public void onAchievement(final AchievementEvent event) {
+//        MoarAchievements.LOGGER_MOAR_ACHIEVEMENTS.info(event.achievement.toString());
     }
 
 }

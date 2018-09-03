@@ -2,10 +2,9 @@ package org.slave.minecraft.moarachievements.achievements.storage;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.stats.Achievement;
 import net.minecraft.stats.AchievementList;
-import org.slave.minecraft.moarachievements.achievements.AchievementMoar;
+import org.slave.minecraft.moarachievements.MoarAchievements;
 
 /**
  * Created by Master801 on 12/21/2016 at 4:16 PM.
@@ -14,7 +13,7 @@ import org.slave.minecraft.moarachievements.achievements.AchievementMoar;
  */
 public final class AchievementStorage {
 
-    public static final Achievement ACHIEVEMENT_MAKE_SHOVEL = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_SHOVEL = new Achievement(
             "achievement.moarachievementsredux.buildShovel",
             "moarachievementsredux.buildShovel",
             5,
@@ -23,7 +22,7 @@ public final class AchievementStorage {
             AchievementList.buildWorkBench
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_AXE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_AXE = new Achievement(
             "achievement.moarachievementsredux.buildAxe",
             "moarachievementsredux.buildAxe",
             -1,
@@ -32,7 +31,7 @@ public final class AchievementStorage {
             AchievementList.buildWorkBench
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_IRON_PICK_AXE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_IRON_PICK_AXE = new Achievement(
             "achievement.moarachievementsredux.buildSteelPickaxe",
             "moarachievementsredux.buildSteelPickaxe",
             9,
@@ -41,7 +40,7 @@ public final class AchievementStorage {
             AchievementList.buildBetterPickaxe
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_GOLD_PICK_AXE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_GOLD_PICK_AXE = new Achievement(
             "achievement.moarachievementsredux.buildGoldPickaxe",
             "moarachievementsredux.buildGoldPickaxe",
             10,
@@ -50,7 +49,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MAKE_IRON_PICK_AXE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_DIAMOND_PICK_AXE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_DIAMOND_PICK_AXE = new Achievement(
             "achievement.moarachievementsredux.buildDiamondPickaxe",
             "moarachievementsredux.buildDiamondPickaxe",
             11,
@@ -59,7 +58,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MAKE_IRON_PICK_AXE
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_REDSTONE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_REDSTONE = new Achievement(
             "achievement.moarachievementsredux.mineRedstone",
             "moarachievementsredux.mineRedstone",
             9,
@@ -68,7 +67,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MAKE_IRON_PICK_AXE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_DISPENSER = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_DISPENSER = new Achievement(
             "achievement.moarachievementsredux.buildDispenser",
             "moarachievementsredux.buildDispenser",
             7,
@@ -77,7 +76,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_NOTEBLOCK = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_NOTEBLOCK = new Achievement(
             "achievement.moarachievementsredux.buildNoteBlock",
             "moarachievementsredux.buildNoteBlock",
             7,
@@ -86,7 +85,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_PISTON = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_PISTON = new Achievement(
             "achievement.moarachievementsredux.buildPiston",
             "moarachievementsredux.buildPiston",
             11,
@@ -95,7 +94,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_STICKY_PISTON = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_STICKY_PISTON = new Achievement(
             "achievement.moarachievementsredux.buildStickyPiston",
             "moarachievementsredux.buildStickyPiston",
             13,
@@ -104,7 +103,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MAKE_PISTON
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_REDSTONE_TORCH = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_REDSTONE_TORCH = new Achievement(
             "achievement.moarachievementsredux.buildRedstoneTorch",
             "moarachievementsredux.buildRedstoneTorch",
             11,
@@ -113,16 +112,16 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_REDSTONE_REPEATER = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_REDSTONE_REPEATER = new Achievement(
             "achievement.moarachievementsredux.buildRedstoneRepeater",
             "moarachievementsredux.buildRedstoneRepeater",
             13,
             10,
-            Blocks.powered_repeater,
+            Items.repeater,
             AchievementStorage.ACHIEVEMENT_MAKE_REDSTONE_TORCH
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_CLOCK = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_CLOCK = new Achievement(
             "achievement.moarachievementsredux.buildClock",
             "moarachievementsredux.buildClock",
             11,
@@ -131,7 +130,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_JUKEBOX = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_JUKEBOX = new Achievement(
             "achievement.moarachievementsredux.buildJukebox",
             "moarachievementsredux.buildJukebox",
             9,
@@ -140,7 +139,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_COMPASS = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_COMPASS = new Achievement(
             "achievement.moarachievementsredux.buildCompass",
             "moarachievementsredux.buildCompass",
             11,
@@ -149,7 +148,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_REDSTONE
     );
 
-    public static final Achievement ACHIEVEMENT_COLLECT_RED_APPLE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_COLLECT_RED_APPLE = new Achievement(
             "achievement.moarachievementsredux.collectRedApple",
             "moarachievementsredux.collectRedApple",
             -5,
@@ -158,7 +157,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MAKE_AXE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_GOLDEN_APPLE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_GOLDEN_APPLE = new Achievement(
             "achievement.moarachievementsredux.buildGoldenApple",
             "moarachievementsredux.buildGoldenApple",
             -6,
@@ -167,7 +166,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_COLLECT_RED_APPLE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_COOKIE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_COOKIE = new Achievement(
             "achievement.moarachievementsredux.buildCookie",
             "moarachievementsredux.buildCookie",
             -4,
@@ -176,7 +175,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_COLLECT_RED_APPLE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_CHEST = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_CHEST = new Achievement(
             "achievement.moarachievementsredux.buildChest",
             "moarachievementsredux.buildChest",
             -1,
@@ -185,7 +184,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MAKE_AXE
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_COAL = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_COAL = new Achievement(
             "achievement.moarachievementsredux.mineCoal",
             "moarachievementsredux.mineCoal",
             6,
@@ -194,7 +193,7 @@ public final class AchievementStorage {
             AchievementList.buildPickaxe
     );
 
-    public static final Achievement ACHIEVEMENT_SMELT_COBBLESTONE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_SMELT_COBBLESTONE = new Achievement(
             "achievement.moarachievementsredux.smeltCobbleStone",
             "moarachievementsredux.smeltCobbleStone",
             5,
@@ -203,7 +202,7 @@ public final class AchievementStorage {
             AchievementList.buildFurnace
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_FLINT_AND_IRON = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_FLINT_AND_IRON = new Achievement(
             "achievement.moarachievementsredux.buildFlintAndSteel",
             "moarachievementsredux.buildFlintAndSteel",
             3,
@@ -212,7 +211,7 @@ public final class AchievementStorage {
             AchievementList.acquireIron
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_SHEARS = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_SHEARS = new Achievement(
             "achievement.moarachievementsredux.buildShears",
             "moarachievementsredux.buildShears",
             1,
@@ -221,7 +220,7 @@ public final class AchievementStorage {
             AchievementList.acquireIron
     );
 
-    public static final Achievement ACHIEVEMENT_COLLECT_WOOL = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_COLLECT_WOOL = new Achievement(
             "achievement.moarachievementsredux.collectWool",
             "moarachievementsredux.collectWool",
             -1,
@@ -230,7 +229,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MAKE_SHEARS
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_BED = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_BED = new Achievement(
             "achievement.moarachievementsredux.buildBed",
             "moarachievementsredux.buildBed",
             -1,
@@ -239,7 +238,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_COLLECT_WOOL
     );
 
-    public static final Achievement ACHIEVEMENT_ENTER_CAVE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_ENTER_CAVE = new Achievement(
             "achievement.moarachievementsredux.enterCave",
             "moarachievementsredux.enterCave",
             11,
@@ -248,7 +247,7 @@ public final class AchievementStorage {
             AchievementList.killEnemy
     );
 
-    public static final Achievement ACHIEVEMENT_KILL_SPIDER = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_KILL_SPIDER = new Achievement(
             "achievement.moarachievementsredux.killSpider",
             "moarachievementsredux.killSpider",
             14,
@@ -257,7 +256,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_ENTER_CAVE
     );
 
-    public static final Achievement ACHIEVEMENT_KILL_SKELETON = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_KILL_SKELETON = new Achievement(
             "achievement.moarachievementsredux.killSkeleton",
             "moarachievementsredux.killSkeleton",
             16,
@@ -266,7 +265,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_KILL_SPIDER
     );
 
-    public static final Achievement ACHIEVEMENT_KILL_SLIME = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_KILL_SLIME = new Achievement(
             "achievement.moarachievementsredux.killSlime",
             "moarachievementsredux.killSlime",
             16,
@@ -275,7 +274,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_KILL_SPIDER
     );
 
-    public static final Achievement ACHIEVEMENT_KILL_ENDERMAN = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_KILL_ENDERMAN = new Achievement(
             "achievement.moarachievementsredux.killEnderman",
             "moarachievementsredux.killEnderman",
             11,
@@ -284,7 +283,7 @@ public final class AchievementStorage {
             AchievementList.buildSword
     );
 
-    public static final Achievement ACHIEVEMENT_KILL_PASSIVE_MOB_FOR_MEAT = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_KILL_PASSIVE_MOB_FOR_MEAT = new Achievement(
             "achievement.moarachievementsredux.killPassiveMobForMeat",
             "moarachievementsredux.killPassiveMobForMeat",
             11,
@@ -293,7 +292,7 @@ public final class AchievementStorage {
             AchievementList.buildSword
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_BOW = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_BOW = new Achievement(
             "achievement.moarachievementsredux.buildBow",
             "moarachievementsredux.buildBow",
             14,
@@ -302,7 +301,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_KILL_SPIDER
     );
 
-    public static final Achievement ACHIEVEMENT_EAT_BACON = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_EAT_BACON = new Achievement(
             "achievement.moarachievementsredux.eatBacon",
             "moarachievementsredux.eatBacon",
             12,
@@ -311,7 +310,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_KILL_PASSIVE_MOB_FOR_MEAT
     );
 
-    public static final Achievement ACHIEVEMENT_COLLECT_EGG = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_COLLECT_EGG = new Achievement(
             "achievement.moarachievementsredux.collectEgg",
             "moarachievementsredux.collectEgg",
             11,
@@ -320,7 +319,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_KILL_PASSIVE_MOB_FOR_MEAT
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_DIRT = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_DIRT = new Achievement(
             "achievement.moarachievementsredux.mineDirt",
             "moarachievementsredux.mineDirt",
             -5,
@@ -329,7 +328,7 @@ public final class AchievementStorage {
             AchievementList.openInventory
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_COBBLESTONE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_COBBLESTONE = new Achievement(
             "achievement.moarachievementsredux.mineCobblestone",
             "moarachievementsredux.mineCobblestone",
             -5,
@@ -338,7 +337,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_DIRT
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_CACTUS = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_CACTUS = new Achievement(
             "achievement.moarachievementsredux.mineCactus",
             "moarachievementsredux.mineCactus",
             -5,
@@ -347,7 +346,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_DIRT
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_SOUL_SAND = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_SOUL_SAND = new Achievement(
             "achievement.moarachievementsredux.mineSoulSand",
             "moarachievementsredux.mineSoulSand",
             -3,
@@ -356,7 +355,7 @@ public final class AchievementStorage {
             AchievementList.portal
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_NETHER_WART = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_NETHER_WART = new Achievement(
             "achievement.moarachievementsredux.mineNetherWart",
             "moarachievementsredux.mineNetherWart",
             -3,
@@ -365,7 +364,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_SOUL_SAND
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_NETHERRACK = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_NETHERRACK = new Achievement(
             "achievement.moarachievementsredux.mineNetherrack",
             "moarachievementsredux.mineNetherrack",
             -1,
@@ -374,25 +373,25 @@ public final class AchievementStorage {
             AchievementList.portal
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_BREWING_STAND = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_BREWING_STAND = new Achievement(
             "achievement.moarachievementsredux.buildBrewingStand",
             "moarachievementsredux.buildBrewingStand",
             1,
             12,
-            Blocks.brewing_stand,
+            Items.brewing_stand,
             AchievementList.blazeRod
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_SUGAR_CANE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_SUGAR_CANE = new Achievement(
             "achievement.moarachievementsredux.mineSugarCane",
             "moarachievementsredux.mineSugarCane",
             3,
             -7,
-            Item.getItemFromBlock(Blocks.reeds),
+            Items.reeds,
             AchievementList.buildHoe
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_PAPER = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_PAPER = new Achievement(
             "achievement.moarachievementsredux.buildPaper",
             "moarachievementsredux.buildPaper",
             1,
@@ -401,7 +400,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MINE_SUGAR_CANE
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_MAP = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_MAP = new Achievement(
             "achievement.moarachievementsredux.buildMap",
             "moarachievementsredux.buildMap",
             -1,
@@ -410,7 +409,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MAKE_PAPER
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_DRAGON_EGG = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_DRAGON_EGG = new Achievement(
             "achievement.moarachievementsredux.mineDragonEgg",
             "moarachievementsredux.mineDragonEgg",
             5,
@@ -419,7 +418,7 @@ public final class AchievementStorage {
             AchievementList.theEnd2
     );
 
-    public static final Achievement ACHIEVEMENT_MINE_WHEAT = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MINE_WHEAT = new Achievement(
             "achievement.moarachievementsredux.mineWheat",
             "moarachievementsredux.mineWheat",
             1,
@@ -428,7 +427,7 @@ public final class AchievementStorage {
             AchievementList.buildHoe
     );
 
-    public static final Achievement ACHIEVEMENT_LIVE_FALLING = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_LIVE_FALLING = new Achievement(
             "achievement.moarachievementsredux.liveFalling",
             "moarachievementsredux.liveFalling",
             11,
@@ -437,7 +436,7 @@ public final class AchievementStorage {
             null
     ).initIndependentStat();
 
-    public static final Achievement ACHIEVEMENT_KILL_ZOMBIE = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_KILL_ZOMBIE = new Achievement(
             "achievement.moarachievementsredux.killZombie",
             "moarachievementsredux.killZombie",
             14,
@@ -446,7 +445,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MAKE_BOW
     );
 
-    public static final Achievement ACHIEVEMENT_KILL_CREEPER = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_KILL_CREEPER = new Achievement(
             "achievement.moarachievementsredux.killCreeper",
             "moarachievementsredux.killCreeper",
             16,
@@ -455,7 +454,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_MAKE_BOW
     );
 
-    public static final Achievement ACHIEVEMENT_MAKE_TNT = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_MAKE_TNT = new Achievement(
             "achievement.moarachievementsredux.buildTNT",
             "moarachievementsredux.buildTNT",
             17,
@@ -464,7 +463,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_KILL_CREEPER
     );
 
-    public static final Achievement ACHIEVEMENT_GET_SKELETON_TO_KILL_CREEPER = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_GET_SKELETON_TO_KILL_CREEPER = new Achievement(
             "achievement.moarachievementsredux.getSkeletonToKillCreeper",
             "moarachievementsredux.getSkeletonToKillCreeper",
             18,
@@ -473,7 +472,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_KILL_CREEPER
     );
 
-    public static final Achievement ACHIEVEMENT_LEVEL_1 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_LEVEL_1 = new Achievement(
             "achievement.moarachievementsredux.level1",
             "moarachievementsredux.level1",
             19,
@@ -482,7 +481,7 @@ public final class AchievementStorage {
             null
     ).initIndependentStat();
 
-    public static final Achievement ACHIEVEMENT_LEVEL_2 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_LEVEL_2 = new Achievement(
             "achievement.moarachievementsredux.level2",
             "moarachievementsredux.level2",
             21,
@@ -491,7 +490,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_LEVEL_1
     );
 
-    public static final Achievement ACHIEVEMENT_LEVEL_3 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_LEVEL_3 = new Achievement(
             "achievement.moarachievementsredux.level3",
             "moarachievementsredux.level3",
             22,
@@ -500,7 +499,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_LEVEL_2
     );
 
-    public static final Achievement ACHIEVEMENT_LEVEL_4 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_LEVEL_4 = new Achievement(
             "achievement.moarachievementsredux.level4",
             "moarachievementsredux.level4",
             20,
@@ -509,7 +508,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_LEVEL_3
     );
 
-    public static final Achievement ACHIEVEMENT_LEVEL_5 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_LEVEL_5 = new Achievement(
             "achievement.moarachievementsredux.level5",
             "moarachievementsredux.level5",
             18,
@@ -518,7 +517,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_LEVEL_4
     );
 
-    public static final Achievement ACHIEVEMENT_LEVEL_10 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_LEVEL_10 = new Achievement(
             "achievement.moarachievementsredux.level10",
             "moarachievementsredux.level10",
             17,
@@ -527,7 +526,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_LEVEL_5
     );
 
-    public static final Achievement ACHIEVEMENT_OBSIDIAN_1 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_OBSIDIAN_1 = new Achievement(
             "achievement.moarachievementsredux.obsidian1",
             "moarachievementsredux.obsidian1",
             16,
@@ -536,7 +535,7 @@ public final class AchievementStorage {
             null
     ).initIndependentStat();
 
-    public static final Achievement ACHIEVEMENT_OBSIDIAN_2 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_OBSIDIAN_2 = new Achievement(
             "achievement.moarachievementsredux.obsidian2",
             "moarachievementsredux.obsidian2",
             17,
@@ -545,7 +544,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_1
     );
 
-    public static final Achievement ACHIEVEMENT_OBSIDIAN_3 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_OBSIDIAN_3 = new Achievement(
             "achievement.moarachievementsredux.obsidian3",
             "moarachievementsredux.obsidian3",
             18,
@@ -554,7 +553,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_2
     );
 
-    public static final Achievement ACHIEVEMENT_OBSIDIAN_4 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_OBSIDIAN_4 = new Achievement(
             "achievement.moarachievementsredux.obsidian4",
             "moarachievementsredux.obsidian4",
             18,
@@ -563,7 +562,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_3
     );
 
-    public static final Achievement ACHIEVEMENT_OBSIDIAN_5 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_OBSIDIAN_5 = new Achievement(
             "achievement.moarachievementsredux.obsidian5",
             "moarachievementsredux.obsidian5",
             18,
@@ -572,7 +571,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_4
     );
 
-    public static final Achievement ACHIEVEMENT_OBSIDIAN_6 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_OBSIDIAN_6 = new Achievement(
             "achievement.moarachievementsredux.obsidian6",
             "moarachievementsredux.obsidian6",
             17,
@@ -581,7 +580,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_5
     );
 
-    public static final Achievement ACHIEVEMENT_OBSIDIAN_7 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_OBSIDIAN_7 = new Achievement(
             "achievement.moarachievementsredux.obsidian7",
             "moarachievementsredux.obsidian7",
             15,
@@ -590,7 +589,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_6
     );
 
-    public static final Achievement ACHIEVEMENT_OBSIDIAN_8 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_OBSIDIAN_8 = new Achievement(
             "achievement.moarachievementsredux.obsidian8",
             "moarachievementsredux.obsidian8",
             15,
@@ -599,7 +598,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_7
     );
 
-    public static final Achievement ACHIEVEMENT_OBSIDIAN_9 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_OBSIDIAN_9 = new Achievement(
             "achievement.moarachievementsredux.obsidian9",
             "moarachievementsredux.obsidian9",
             16,
@@ -608,7 +607,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_8
     );
 
-    public static final Achievement ACHIEVEMENT_OBSIDIAN_10 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_OBSIDIAN_10 = new Achievement(
             "achievement.moarachievementsredux.obsidian10",
             "moarachievementsredux.obsidian10",
             17,
@@ -617,7 +616,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_OBSIDIAN_9
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_1 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_1 = new Achievement(
             "achievement.moarachievementsredux.portal1",
             "moarachievementsredux.portal1",
             16,
@@ -626,7 +625,7 @@ public final class AchievementStorage {
             null
     ).initIndependentStat();
 
-    public static final Achievement ACHIEVEMENT_PORTAL_2 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_2 = new Achievement(
             "achievement.moarachievementsredux.portal2",
             "moarachievementsredux.portal2",
             17,
@@ -635,7 +634,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_1
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_3 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_3 = new Achievement(
             "achievement.moarachievementsredux.portal3",
             "moarachievementsredux.portal3",
             18,
@@ -644,7 +643,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_2
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_4 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_4 = new Achievement(
             "achievement.moarachievementsredux.portal4",
             "moarachievementsredux.portal4",
             18,
@@ -653,7 +652,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_3
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_5 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_5 = new Achievement(
             "achievement.moarachievementsredux.portal5",
             "moarachievementsredux.portal5",
             18,
@@ -662,7 +661,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_4
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_6 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_6 = new Achievement(
             "achievement.moarachievementsredux.portal6",
             "moarachievementsredux.portal6",
             15,
@@ -671,7 +670,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_5
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_7 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_7 = new Achievement(
             "achievement.moarachievementsredux.portal7",
             "moarachievementsredux.portal7",
             15,
@@ -680,7 +679,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_6
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_8 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_8 = new Achievement(
             "achievement.moarachievementsredux.portal8",
             "moarachievementsredux.portal8",
             15,
@@ -689,7 +688,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_7
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_9 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_9 = new Achievement(
             "achievement.moarachievementsredux.portal9",
             "moarachievementsredux.portal9",
             16,
@@ -698,7 +697,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_8
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_10 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_10 = new Achievement(
             "achievement.moarachievementsredux.portal10",
             "moarachievementsredux.portal10",
             17,
@@ -707,7 +706,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_9
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_11 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_11 = new Achievement(
             "achievement.moarachievementsredux.portal11",
             "moarachievementsredux.portal11",
             16,
@@ -716,7 +715,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_10
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_12 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_12 = new Achievement(
             "achievement.moarachievementsredux.portal12",
             "moarachievementsredux.portal12",
             16,
@@ -725,7 +724,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_11
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_13 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_13 = new Achievement(
             "achievement.moarachievementsredux.portal13",
             "moarachievementsredux.portal13",
             16,
@@ -734,7 +733,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_12
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_14 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_14 = new Achievement(
             "achievement.moarachievementsredux.portal14",
             "moarachievementsredux.portal14",
             17,
@@ -743,7 +742,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_13
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_15 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_15 = new Achievement(
             "achievement.moarachievementsredux.portal15",
             "moarachievementsredux.portal15",
             17,
@@ -752,7 +751,7 @@ public final class AchievementStorage {
             AchievementStorage.ACHIEVEMENT_PORTAL_14
     );
 
-    public static final Achievement ACHIEVEMENT_PORTAL_16 = new AchievementMoar(
+    public static final Achievement ACHIEVEMENT_PORTAL_16 = new Achievement(
             "achievement.moarachievementsredux.portal16",
             "moarachievementsredux.portal16",
             17,
@@ -760,6 +759,15 @@ public final class AchievementStorage {
             Blocks.portal,
             AchievementStorage.ACHIEVEMENT_PORTAL_15
     );
+
+    public static final Achievement ACHIEVEMENT_HOW_IS_THIS_POSSIBLE = new Achievement(
+            "achievement.moarachievementsredux.how_is_this_possible",
+            "moarachievementsredux.how_is_this_possible",
+            -4,
+            7,
+            MoarAchievements.ITEM_ACHIEVEMENT_GETTER,
+            null
+    ).initIndependentStat();
 
     public static void registerAchievements() {
         AchievementStorage.ACHIEVEMENT_MAKE_SHOVEL.registerStat();
@@ -845,6 +853,7 @@ public final class AchievementStorage {
         AchievementStorage.ACHIEVEMENT_PORTAL_14.registerStat();
         AchievementStorage.ACHIEVEMENT_PORTAL_15.registerStat();
         AchievementStorage.ACHIEVEMENT_PORTAL_16.registerStat();
+        AchievementStorage.ACHIEVEMENT_HOW_IS_THIS_POSSIBLE.registerStat();
     }
 
 }

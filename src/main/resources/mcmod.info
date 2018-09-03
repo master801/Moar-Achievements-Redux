@@ -2,12 +2,12 @@
 {
   "modid": "moararchievementsredux",
   "name": "Moar Achievements Redux",
-  "description": "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/requests-ideas-for-mods/2773200",
+  "description": "Sorry for being late",
   "version": "${version}",
-  "mcversion": "${mcversion}",
+  "mcversion": "${mc_version}",
   "url": "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1286689",
   "updateUrl": "",
-  "credits": "",
+  "credits": "Sonicjumper for the original mod and code",
   "authors": [
   	"Sonicjumper",
   	"Master801"
