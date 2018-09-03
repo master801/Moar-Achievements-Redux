@@ -6,6 +6,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.boss.EntityDragon;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.monster.EntityBlaze;
+import net.minecraft.entity.monster.EntityCaveSpider;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.monster.EntityGhast;
@@ -27,6 +28,7 @@ import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.world.BlockEvent.PlaceEvent;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorage;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageDeath;
+import org.slave.minecraft.moarachievements.events.EventPortalCreate;
 
 public final class EventHookContainer {
 
@@ -54,8 +56,8 @@ public final class EventHookContainer {
             if (event.entity instanceof EntityCreeper) {
                 playerSource.triggerAchievement(AchievementStorage.ACHIEVEMENT_KILL_CREEPER);
             }
-            if (event.entity instanceof EntitySpider) {
-                playerSource.triggerAchievement(AchievementStorage.ACHIEVEMENT_KILL_SPIDER);
+            if (event.entity instanceof EntityCaveSpider) {
+                playerSource.triggerAchievement(AchievementStorage.ACHIEVEMENT_KILL_CAVE_SPIDER);
             }
             if (event.entity instanceof EntitySlime) {
                 playerSource.triggerAchievement(AchievementStorage.ACHIEVEMENT_KILL_SLIME);
@@ -254,6 +256,11 @@ public final class EventHookContainer {
 //            placeEvent.player.triggerAchievement(AchievementStorage.ACHIEVEMENT_OBSIDIAN_9);
 //            placeEvent.player.triggerAchievement(AchievementStorage.ACHIEVEMENT_OBSIDIAN_10);
 //        }
+    }
+
+    @SubscribeEvent
+    public void onPortalCreated(final EventPortalCreate eventPortalCreate) {
+        //TODO
     }
 
 }

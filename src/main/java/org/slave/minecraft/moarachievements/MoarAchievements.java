@@ -17,13 +17,12 @@ import org.slave.minecraft.moarachievements.achievements.pages.AchievementPageTi
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorage;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageDeath;
 import org.slave.minecraft.moarachievements.achievements.storage.AchievementStorageTiered;
-import org.slave.minecraft.moarachievements.common.MoarConfiguration;
 import org.slave.minecraft.moarachievements.common.PlayerEventHandler;
 import org.slave.minecraft.moarachievements.hook.EventHookContainer;
 import org.slave.minecraft.moarachievements.hook.PlayerEventHook;
 import org.slave.minecraft.moarachievements.item.ItemAchievementGetter;
 
-@Mod(modid = MoarAchievements.MOD_ID, name = MoarAchievements.NAME, version = "@VERSION@")
+@Mod(modid = MoarAchievements.MOD_ID, name = MoarAchievements.NAME, version = "@VERSION@", acceptedMinecraftVersions = "1.7.10")
 public final class MoarAchievements {
 
     public static final String MOD_ID = "moar_archievements_redux";
@@ -36,13 +35,8 @@ public final class MoarAchievements {
 
     public static final Item ITEM_ACHIEVEMENT_GETTER = new ItemAchievementGetter();
 
-    public static MoarConfiguration moarConfiguration;
-
     @EventHandler
     public void preInit(final FMLPreInitializationEvent event) {
-        MoarAchievements.moarConfiguration = new MoarConfiguration();
-        MoarAchievements.moarConfiguration.loadConfig(true);
-
         GameRegistry.registerItem(
                 MoarAchievements.ITEM_ACHIEVEMENT_GETTER,
                 "achievementGetter"
@@ -58,22 +52,6 @@ public final class MoarAchievements {
 
         MinecraftForge.EVENT_BUS.register(PlayerEventHook.INSTANCE);
         FMLCommonHandler.instance().bus().register(PlayerEventHook.INSTANCE);
-
-        /*
-        GameRegistry.addRecipe(
-                new ItemStack(MoarAchievements.ITEM_ACHIEVEMENT_GETTER),
-
-                "***",
-                "*@*",
-                "***",
-
-                '*',
-                Items.diamond,
-
-                '@',
-                Blocks.gold_block
-        );
-        */
     }
 
     private void registerAchievements() {

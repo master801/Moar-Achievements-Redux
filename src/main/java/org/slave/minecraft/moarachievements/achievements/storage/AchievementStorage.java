@@ -25,7 +25,7 @@ public final class AchievementStorage {
     public static final Achievement ACHIEVEMENT_MAKE_AXE = new Achievement(
             "achievement.moarachievementsredux.buildAxe",
             "moarachievementsredux.buildAxe",
-            -1,
+            -2,
             -1,
             Items.wooden_axe,
             AchievementList.buildWorkBench
@@ -178,7 +178,7 @@ public final class AchievementStorage {
     public static final Achievement ACHIEVEMENT_MAKE_CHEST = new Achievement(
             "achievement.moarachievementsredux.buildChest",
             "moarachievementsredux.buildChest",
-            -1,
+            -2,
             -5,
             Blocks.chest,
             AchievementStorage.ACHIEVEMENT_MAKE_AXE
@@ -214,8 +214,8 @@ public final class AchievementStorage {
     public static final Achievement ACHIEVEMENT_MAKE_SHEARS = new Achievement(
             "achievement.moarachievementsredux.buildShears",
             "moarachievementsredux.buildShears",
-            1,
-            2,
+            -1,
+            6,
             Items.shears,
             AchievementList.acquireIron
     );
@@ -247,9 +247,9 @@ public final class AchievementStorage {
             AchievementList.killEnemy
     );
 
-    public static final Achievement ACHIEVEMENT_KILL_SPIDER = new Achievement(
-            "achievement.moarachievementsredux.killSpider",
-            "moarachievementsredux.killSpider",
+    public static final Achievement ACHIEVEMENT_KILL_CAVE_SPIDER = new Achievement(
+            "achievement.moarachievementsredux.killCaveSpider",
+            "moarachievementsredux.killCaveSpider",
             14,
             1,
             Items.string,
@@ -262,7 +262,7 @@ public final class AchievementStorage {
             16,
             1,
             Items.arrow,
-            AchievementStorage.ACHIEVEMENT_KILL_SPIDER
+            AchievementStorage.ACHIEVEMENT_KILL_CAVE_SPIDER
     );
 
     public static final Achievement ACHIEVEMENT_KILL_SLIME = new Achievement(
@@ -271,7 +271,7 @@ public final class AchievementStorage {
             16,
             -1,
             Items.slime_ball,
-            AchievementStorage.ACHIEVEMENT_KILL_SPIDER
+            AchievementStorage.ACHIEVEMENT_KILL_CAVE_SPIDER
     );
 
     public static final Achievement ACHIEVEMENT_KILL_ENDERMAN = new Achievement(
@@ -298,7 +298,7 @@ public final class AchievementStorage {
             14,
             -3,
             Items.bow,
-            AchievementStorage.ACHIEVEMENT_KILL_SPIDER
+            AchievementStorage.ACHIEVEMENT_KILL_CAVE_SPIDER
     );
 
     public static final Achievement ACHIEVEMENT_EAT_BACON = new Achievement(
@@ -351,7 +351,7 @@ public final class AchievementStorage {
             "moarachievementsredux.mineSoulSand",
             -3,
             10,
-            Blocks.sandstone,
+            Blocks.soul_sand,
             AchievementList.portal
     );
 
@@ -767,7 +767,9 @@ public final class AchievementStorage {
             7,
             MoarAchievements.ITEM_ACHIEVEMENT_GETTER,
             null
-    ).initIndependentStat();
+    )
+            .initIndependentStat()
+            .setSpecial();
 
     public static void registerAchievements() {
         AchievementStorage.ACHIEVEMENT_MAKE_SHOVEL.registerStat();
@@ -797,7 +799,7 @@ public final class AchievementStorage {
         AchievementStorage.ACHIEVEMENT_COLLECT_WOOL.registerStat();
         AchievementStorage.ACHIEVEMENT_MAKE_BED.registerStat();
         AchievementStorage.ACHIEVEMENT_ENTER_CAVE.registerStat();
-        AchievementStorage.ACHIEVEMENT_KILL_SPIDER.registerStat();
+        AchievementStorage.ACHIEVEMENT_KILL_CAVE_SPIDER.registerStat();
         AchievementStorage.ACHIEVEMENT_KILL_SKELETON.registerStat();
         AchievementStorage.ACHIEVEMENT_KILL_SLIME.registerStat();
         AchievementStorage.ACHIEVEMENT_KILL_ENDERMAN.registerStat();

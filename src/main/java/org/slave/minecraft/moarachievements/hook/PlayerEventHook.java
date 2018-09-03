@@ -58,13 +58,12 @@ public final class PlayerEventHook {
         achievementItemPickup.put(Items.apple, new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_COLLECT_RED_APPLE));
         achievementItemPickup.put(Item.getItemFromBlock(Blocks.soul_sand), new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_SOUL_SAND));
         achievementItemPickup.put(Item.getItemFromBlock(Blocks.netherrack), new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_NETHERRACK));
-        achievementItemPickup.put(Item.getItemFromBlock(Blocks.reeds), new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_SUGAR_CANE));
+        achievementItemPickup.put(Items.reeds, new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_SUGAR_CANE));
         achievementItemPickup.put(Items.nether_wart, new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_NETHER_WART));
         achievementItemPickup.put(Item.getItemFromBlock(Blocks.dragon_egg), new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_DRAGON_EGG));
         achievementItemPickup.put(Item.getItemFromBlock(Blocks.dirt), new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_DIRT));
         achievementItemPickup.put(Item.getItemFromBlock(Blocks.brown_mushroom), new SimpleEntry<>(0, AchievementStorageTiered.ACHIEVEMENT_MINE_MUSHROOM_BROWN));
         achievementItemPickup.put(Item.getItemFromBlock(Blocks.red_mushroom), new SimpleEntry<>(0, AchievementStorageTiered.ACHIEVEMENT_MINE_MUSHROOM_RED));
-        achievementItemPickup.put(Item.getItemFromBlock(Blocks.snow), new SimpleEntry<>(0, AchievementStorageTiered.ACHIEVEMENT_MINE_SNOW));
         achievementItemPickup.put(Item.getItemFromBlock(Blocks.cobblestone), new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_COBBLESTONE));
         achievementItemPickup.put(Items.clay_ball, new SimpleEntry<>(0, AchievementStorageTiered.ACHIEVEMENT_MINE_CLAY));
         achievementItemPickup.put(Items.wheat, new SimpleEntry<>(0, AchievementStorage.ACHIEVEMENT_MINE_WHEAT));
@@ -101,8 +100,7 @@ public final class PlayerEventHook {
         achievementItemCrafted.put(Item.getItemFromBlock(Blocks.glowstone), AchievementStorageTiered.ACHIEVEMENT_MAKE_GLOWSTONE);
         achievementItemCrafted.put(Item.getItemFromBlock(Blocks.tnt), AchievementStorage.ACHIEVEMENT_MAKE_TNT);
         achievementItemCrafted.put(Item.getItemFromBlock(Blocks.jukebox), AchievementStorage.ACHIEVEMENT_MAKE_JUKEBOX);
-        achievementItemCrafted.put(Item.getItemFromBlock(Blocks.powered_repeater), AchievementStorage.ACHIEVEMENT_MAKE_REDSTONE_REPEATER);
-        achievementItemCrafted.put(Item.getItemFromBlock(Blocks.unpowered_repeater), AchievementStorage.ACHIEVEMENT_MAKE_REDSTONE_REPEATER);
+        achievementItemCrafted.put(Items.repeater, AchievementStorage.ACHIEVEMENT_MAKE_REDSTONE_REPEATER);
         achievementItemCrafted.put(Item.getItemFromBlock(Blocks.redstone_torch), AchievementStorage.ACHIEVEMENT_MAKE_REDSTONE_TORCH);
         achievementItemCrafted.put(Item.getItemFromBlock(Blocks.unlit_redstone_torch), AchievementStorage.ACHIEVEMENT_MAKE_REDSTONE_TORCH);
         achievementItemCrafted.put(Item.getItemFromBlock(Blocks.piston), AchievementStorage.ACHIEVEMENT_MAKE_PISTON);

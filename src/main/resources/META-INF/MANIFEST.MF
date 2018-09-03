@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+FMLCorePlugin: org.slave.minecraft.moarachievements.asm.MA_ASM
+FMLCorePluginContainsFMLMod: true
+Created-By: Master801

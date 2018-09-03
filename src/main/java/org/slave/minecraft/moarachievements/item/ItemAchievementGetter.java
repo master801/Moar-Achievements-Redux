@@ -1,5 +1,8 @@
 package org.slave.minecraft.moarachievements.item;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -33,11 +36,18 @@ public final class ItemAchievementGetter extends Item {
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
+    public void registerIcons(final IIconRegister p_94581_1_) {
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
     public IIcon getIconFromDamage(final int p_77617_1_) {
         return Items.book.getIconFromDamage(0);
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public boolean hasEffect(final ItemStack par1ItemStack, final int pass) {
         return true;
     }

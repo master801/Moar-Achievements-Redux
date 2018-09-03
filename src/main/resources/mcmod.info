@@ -1,14 +1,14 @@
 [
 {
-  "modid": "moararchievementsredux",
+  "modid": "moar_archievements_redux",
   "name": "Moar Achievements Redux",
   "description": "Sorry for being late",
   "version": "${version}",
   "mcversion": "${mc_version}",
-  "url": "http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1286689",
+  "url": "https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/wip-mods/2924165",
   "updateUrl": "",
   "credits": "Sonicjumper for the original mod and code",
-  "authors": [
+  "authorList": [
   	"Sonicjumper",
   	"Master801"
   ],
